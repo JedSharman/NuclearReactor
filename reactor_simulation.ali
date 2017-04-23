@@ -1,0 +1,76 @@
+V "GNAT Lib v2015"
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_PROTECTED_TYPES
+RV SPARK_05
+
+U reactor_simulation%b	reactor_simulation.adb	e4880097 NE OO PK
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+U reactor_simulation%s	reactor_simulation.ads	f4f88c55 EE NE OO PK
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-c.ads		20150518132148 5421119b interfaces.c%s
+D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
+D reactor_simulation.ads  20170423152828 f4f88c55 reactor_simulation%s
+D reactor_simulation.adb  20170423153310 10708cc2 reactor_simulation%b
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-multip.ads		20150518132150 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20150518132150 2e5b26a9 system.os_interface%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stausa.ads		20150518132150 017a0a05 system.stack_usage%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20150518132150 601f6b72 system.task_info%s
+D s-taspri.ads		20150518132150 6c1d93d4 system.task_primitives%s
+D s-taskin.ads		20150518132150 339749f0 system.tasking%s
+D s-taprob.ads		20150518132150 502249e3 system.tasking.protected_objects%s
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-win32.ads		20150518132150 b7f96285 system.win32%s
+X 7 reactor_simulation.ads
+1K9*Reactor_Simulation 35l5 35e23 8|1b14 89l5 89t23
+3N4*REACTOR_TIME_STEP
+5W18*Fuel_Rod_Assembly 5d37 5d71 13E7 23l8 23e25 8|3b19 57l8 57t25
+5i37 Initial_Particle_Count{integer} 13r35
+5i71 Initial_Radical_Count{integer} 14r42
+6U17 React 8|5b17 28l11 28t16
+7V16 Particles{integer} 8|30b16 33l11 33t20
+8V16 Radicals{integer} 8|35b16 38l11 38t19
+9U17 RemoveRadicals 9>32 8|40b17 49l11 49t25
+9i32 amount{integer} 8|40b32 42r59
+10V16 Output{integer} 8|52b16 55l11 55t17
+13i7 particle_count{integer} 8|7r13 12r13 12r31 18r16 19r16 32r17
+14i7 radical_neutron_count{integer} 8|10r67 14r13 24r13 37r17 42r10 42r35
+. 44r13 45r13
+15i7 output_energy{integer} 8|16r13 54r17
+18f7 child_creation_rate{float} 8|14r77
+19f7 ramping_rate{float} 8|10r46
+20i7 energy_per_reaction{integer} 8|16r54
+22i7 temp_number_reactions{integer} 8|10r13 12r48 14r52 16r30
+25W19*Control_Rod_Assembly 25d40 31E7 33l8 33e28 8|59b19 87l8 87t28
+25i40 absorption_potential{integer} 32r42
+26U17 Engage 26>24 8|61b17 75l11 75t17
+26f24 percentage{float} 8|61b24 64r29
+27V16 Engagment{float} 8|77b15 80l11 80t20
+28V16 Absorption{integer} 8|82b16 85l11 85t21
+31f7 internal_engagment{float} 8|74r10 79r17 84r25
+32f7 maximum_absorption{float} 8|84r44
+X 8 reactor_simulation.adb
+62f10 temp_percentage{float} 64m10 66r13 67m13 70r13 71m13 74r32
+X 17 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+

@@ -10,14 +10,4 @@ package Protected_Shared_Value is
       The_Data : Integer := Initial_Value;
    end Shared_Integer;
 
-   protected type Shared_Real(Initial_Value : Real) is
-
-      function Read       return Real;
-      procedure Write     (New_Value : in Real);
-      procedure Increment (By        : in Real);
-
-   private
-      The_Data : Real := Initial_Value;
-   end Shared_Real;
-
 end Protected_Shared_Value;
