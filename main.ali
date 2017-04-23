@@ -3,28 +3,59 @@ M P W=b
 P ZX
 
 RN
+RV NO_DELAY
+RV NO_FIXED_POINT
+RV NO_IO
 RV NO_LOCAL_PROTECTED_OBJECTS
+RV NO_PROTECTED_TYPES
+RV NO_RELATIVE_DELAY
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASK_HIERARCHY
+RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
 RV SPARK_05
+RV MAX_TASKS=1+
 
-U main%b		main.adb		97a22a6c NE OO SU
+U main%b		main.adb		2b64a994 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
 W protected_shared_integer%s  protected_shared_integer.adb  protected_shared_integer.ali
-W reactor_simulation%s	reactor_simulation.adb	reactor_simulation.ali
+W system%s		system.ads		system.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-calend.ads		20150518132148 d986d312 ada.calendar%s
+D a-caldel.ads		20150518132148 9f20b83d ada.calendar.delays%s
 D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20150518132148 a5838d5a ada.real_time%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
-D main.adb		20170423072146 7b8d1e2e main%b
+D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
+D main.adb		20170423083410 fae6e7e7 main%b
 D protected_shared_integer.ads  20170423070258 e9efbba7 protected_shared_integer%s
-D reactor_simulation.ads  20170423073646 05c08fe5 reactor_simulation%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-imgint.ads		20150518132150 02dbe0c2 system.img_int%s
 D s-multip.ads		20150518132150 38ac9f73 system.multiprocessors%s
 D s-osinte.ads		20150518132150 2e5b26a9 system.os_interface%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
@@ -35,20 +66,32 @@ D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
 D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
 D s-tasinf.ads		20150518132150 601f6b72 system.task_info%s
 D s-taspri.ads		20150518132150 6c1d93d4 system.task_primitives%s
+D s-taprop.ads		20150518132150 1dd2e1b6 system.task_primitives.operations%s
 D s-taskin.ads		20150518132150 339749f0 system.tasking%s
 D s-taprob.ads		20150518132150 502249e3 system.tasking.protected_objects%s
+D s-tassta.ads		20150518132150 70812003 system.tasking.stages%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 D s-win32.ads		20150518132150 b7f96285 system.win32%s
-X 7 main.adb
-4U11*Main 4b11 12l5 12t9
-6w5 reaction_chamber_temperature{8|3W19}
-X 8 protected_shared_integer.ads
-1K9*Protected_Shared_Integer 7|1w6 1r36 8|13e29
-3W19*Shared_Integer 7|6r36 8|11e22
-X 9 reactor_simulation.ads
-3K9*Reactor_Simulation 7|2w6 2r30 9|12e23
-X 18 s-stausa.ads
+X 1 ada.ads
+16K9*Ada 19e8 15|2r6 2r23
+X 9 a-textio.ads
+49K13*Text_IO 471e16 15|2w10 2r27
+263U14*Put_Line 15|33s10
+X 15 main.adb
+4U11*Main 4b11 45l5 45t9
+6w4 reaction_chamber_temperature{16|3W19}
+10t9 Reaction_Chamber 12b14 18l8 18t24
+21W19 Fuel_Rod_Assembly 21d38 25E7 26l8 26e25 29b19 37l8 37t25
+21i38 Initial_Mass{integer}
+22U17 React 22>23 31b17 34l11 34t16
+22i23 percentage{integer} 31b23 33r19
+25i7 mass{integer}
+X 16 protected_shared_integer.ads
+1K9*Protected_Shared_Integer 15|1w6 1r36 16|13e29
+3W19*Shared_Integer 15|6r35 16|11e22
+X 28 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 
