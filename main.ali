@@ -1,0 +1,54 @@
+V "GNAT Lib v2015"
+M P W=b
+P ZX
+
+RN
+RV NO_LOCAL_PROTECTED_OBJECTS
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U main%b		main.adb		97a22a6c NE OO SU
+W ada.exceptions%s	a-except.adb		a-except.ali
+W protected_shared_integer%s  protected_shared_integer.adb  protected_shared_integer.ali
+W reactor_simulation%s	reactor_simulation.adb	reactor_simulation.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-c.ads		20150518132148 5421119b interfaces.c%s
+D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
+D main.adb		20170423072146 7b8d1e2e main%b
+D protected_shared_integer.ads  20170423070258 e9efbba7 protected_shared_integer%s
+D reactor_simulation.ads  20170423073646 05c08fe5 reactor_simulation%s
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-multip.ads		20150518132150 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20150518132150 2e5b26a9 system.os_interface%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stausa.ads		20150518132150 017a0a05 system.stack_usage%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20150518132150 601f6b72 system.task_info%s
+D s-taspri.ads		20150518132150 6c1d93d4 system.task_primitives%s
+D s-taskin.ads		20150518132150 339749f0 system.tasking%s
+D s-taprob.ads		20150518132150 502249e3 system.tasking.protected_objects%s
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-win32.ads		20150518132150 b7f96285 system.win32%s
+X 7 main.adb
+4U11*Main 4b11 12l5 12t9
+6w5 reaction_chamber_temperature{8|3W19}
+X 8 protected_shared_integer.ads
+1K9*Protected_Shared_Integer 7|1w6 1r36 8|13e29
+3W19*Shared_Integer 7|6r36 8|11e22
+X 9 reactor_simulation.ads
+3K9*Reactor_Simulation 7|2w6 2r30 9|12e23
+X 18 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+
