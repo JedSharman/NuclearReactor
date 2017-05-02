@@ -36,7 +36,9 @@ package Reactor_Simulation is
    end Control_Rod_Assembly;
 
    protected type Coolant_Housing is
-   
+      
+      procedure Cool(Heat : Float);
+      
    private
    	  Salt_Heated   : Float;
 	  Salt_Reactor  : Float;

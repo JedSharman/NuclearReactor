@@ -100,6 +100,10 @@ package body Reactor_Simulation is
    
    protected body Coolant_Housing is
    
+	  procedure Cool (Heat : Float) is
+	  begin
+	     Coolant_Temp := Coolant_Temp + Heat;
+	  end Cool;
 	    
    end Coolant_Housing;
 
@@ -109,6 +113,7 @@ package body Reactor_Simulation is
       begin
           the_core.React;
           the_core.RemoveRadicals(the_control.Absorption);
+          --cooling.Cool();
       end Update;
 
       function Depletion return Float is
