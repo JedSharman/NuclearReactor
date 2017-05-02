@@ -27,6 +27,16 @@ package body Reactor_Simulation is
 
       end React;
 
+      procedure SetParticles(set_to : in Integer) is
+      begin
+         particle_count := set_to;
+      end SetParticles;
+
+      procedure SetRadicals(set_to : in Integer) is
+      begin
+         radical_neutron_count := set_to;
+      end SetRadicals;
+
       function Particles return Integer is
       begin
          return particle_count;
@@ -44,10 +54,7 @@ package body Reactor_Simulation is
          if radical_neutron_count < 0 then
             radical_neutron_count := 0;
          end if;
-
-
       end RemoveRadicals;
-
 
       function Output return Integer is
       begin
@@ -74,6 +81,11 @@ package body Reactor_Simulation is
          internal_engagment := temp_percentage;
       end Engage;
 
+      procedure SetAbsorptionPotential (amount : Float) is
+      begin
+         maximum_absorption := amount;
+      end SetAbsorptionPotential;
+
      function Engagment return Float is
       begin
          return internal_engagment;
@@ -85,5 +97,40 @@ package body Reactor_Simulation is
       end Absorption;
 
    end Control_Rod_Assembly;
+
+    protected body Reactor_Housing is
+      procedure Update is
+      begin
+          the_core.React;
+          the_core.RemoveRadicals(the_control.Absorption);
+      end Update;
+
+      function Depletion return Float is
+      begin
+           return Float(the_core.Particles)*100.0/Float(initial_fuel);
+      end Depletion;
+
+      procedure SetParticles (particles_tc : Integer) is
+      begin
+         the_core.SetParticles(particles_tc);
+         initial_fuel := particles_tc;
+      end SetParticles;
+
+      procedure SetRadicals (radicals_tc : Integer) is
+      begin
+         the_core.SetRadicals(radicals_tc);
+      end SetRadicals;
+
+      procedure SetEngagment(percentage : in Float) is
+      begin
+         the_control.Engage(percentage);
+      end SetEngagment;
+
+      procedure SetAbsorptionPotential(set_to : in Float) is
+      begin
+         the_control.SetAbsorptionPotential(set_to);
+      end SetAbsorptionPotential;
+
+   end Reactor_Housing;
 
 end Reactor_Simulation;
