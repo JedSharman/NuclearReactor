@@ -35,6 +35,16 @@ package Reactor_Simulation is
       maximum_absorption: Float := Float(absorption_potential);--particles per timestep
    end Control_Rod_Assembly;
 
+   protected type Coolant_Housing is
+   
+   private
+   	  Salt_Heated   : Float;
+	  Salt_Reactor  : Float;
+	  Salt_Reservoir: Float;
+	  Coolant_Temp  : Float;
+	  
+   end Coolant_Housing;
+
    protected type Reactor_Housing is
       procedure Update;
       function Depletion return Float;
@@ -46,6 +56,7 @@ package Reactor_Simulation is
    private
       the_core : Fuel_Rod_Assembly(0, 0);
       the_control : Control_Rod_Assembly(10);
+      cooling  : Coolant_Housing;
       initial_fuel : Integer;
 
    end Reactor_Housing;

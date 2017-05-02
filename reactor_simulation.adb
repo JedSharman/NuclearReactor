@@ -97,12 +97,14 @@ package body Reactor_Simulation is
       end Absorption;
 
    end Control_Rod_Assembly;
+   
+   protected body Coolant_Housing is
+   
+	    
+   end Coolant_Housing;
 
     protected body Reactor_Housing is
     
-	  Salt_Heated   : Float;
-	  Salt_Reactor  : Float;
-	  Salt_Reservoir: Float;
       procedure Update is
       begin
           the_core.React;
