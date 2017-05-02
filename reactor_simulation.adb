@@ -99,6 +99,10 @@ package body Reactor_Simulation is
    end Control_Rod_Assembly;
 
     protected body Reactor_Housing is
+    
+	  Salt_Heated   : Float;
+	  Salt_Reactor  : Float;
+	  Salt_Reservoir: Float;
       procedure Update is
       begin
           the_core.React;
