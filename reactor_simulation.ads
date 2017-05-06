@@ -40,10 +40,21 @@ package Reactor_Simulation is
       procedure Cool(Heat : Float);
       
    private
-   	  Salt_Heated   : Float;
+   	  
 	  Salt_Reactor  : Float;
+	  Reactor_Temp  : Float
+	  
+	  Coolant_Salt  : Float;
+   	  Coolant_Temp  : Float;
+	  
 	  Salt_Reservoir: Float;
-	  Coolant_Temp  : Float;
+	  Reservoir_Temp: Float;
+	  
+	  Flow_Rate     : Float;
+	  
+	  Cooling_Factor: Float;
+	  Res_Cooling_Factor : Float;
+	  
 	  
    end Coolant_Housing;
 
