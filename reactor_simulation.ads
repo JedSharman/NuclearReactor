@@ -42,9 +42,9 @@ package Reactor_Simulation is
    private
    	  
 	  Salt_Reactor  : Float;
-	  Reactor_Temp  : Float
+	  Reactor_Temp  : Float;
 	  
-	  Coolant_Salt  : Float;
+	  Coolant_Volume  : Float;
    	  Coolant_Temp  : Float;
 	  
 	  Salt_Reservoir: Float;
@@ -52,8 +52,7 @@ package Reactor_Simulation is
 	  
 	  Flow_Rate     : Float;
 	  
-	  Cooling_Factor: Float;
-	  Res_Cooling_Factor : Float;
+	  Water_Temp    : Float;
 	  
 	  
    end Coolant_Housing;
