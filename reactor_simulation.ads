@@ -54,6 +54,7 @@ package Reactor_Simulation is
 	  
 	  Water_Temp    : Float;
 	  
+	  Meltdown_Temp : Float := 3138.15;
 	  
    end Coolant_Housing;
 

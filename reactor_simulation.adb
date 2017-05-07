@@ -109,13 +109,21 @@ package body Reactor_Simulation is
 	  begin
 	     Reactor_Temp := Reactor_Temp + Heat;					--Reactor heats salt
 																
-		 HeatFlow(Coolant_Temp, Coolant_Volume, Reactor_Salt_Temp);		--Salt tranfsers heat into coolant
+		 HeatFlow(Coolant_Temp, Coolant_Volume, Reactor_Temp);		--Salt tranfsers heat into coolant
 		 HeatFlow(Reservoir_Temp, Salt_Reservoir, Coolant_Temp);		--Reservoir cooled by coolant
 		 HeatFlow(Reactor_Temp, Salt_Reactor, Reservoir_Temp);			--Cool salt from Reservoir flows into reactor
 		 HeatFlow(Coolant_Temp, Coolant_Volume, Water_Temp);			--Coolant water flows out and is replaced
 		 
 		 
 	  end Cool;
+	  
+	  Function MeltDownCheck() return Boolean is 
+	  begin
+		If (Reactor_Temp > Meltdown_Temp) then
+			return True;
+		else return False;
+		end if;
+	  end MeltDownCheck;
 	    
    end Coolant_Housing;
 
