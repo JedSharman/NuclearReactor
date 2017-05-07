@@ -100,19 +100,20 @@ package body Reactor_Simulation is
    
    protected body Coolant_Housing is
    
-	  procedure HeatFlow(OutTemp : out Float; SubjectVol: in Float; InTemp: out Float) is
+	  procedure HeatFlow(Temp1 : out Float; SubjectVol: in Float; Temp2: out Float) is
 	  begin
-		OutTemp := OutTemp(SubjectVol/Flowrate) + (Intemp-OutTemp)*(Flowrate/SubjectVol);
+		Temp1 := Temp1(SubjectVol - Flowrate) + (Flowrate*Temp2);
 	  end HeatFlow;
    
 	  procedure Cool (Heat : out Float) is
 	  begin
-	     Reactor_Salt_Temp := Reactor_Salt_Temp + Heat;					--Reactor heats salt
+	     Reactor_Temp := Reactor_Temp + Heat;					--Reactor heats salt
 																
-		 HeatFlow(Coolant_Temp, Coolant_Volume, Reactor_Salt_Temp);
-		 HeatFlow(Reservoir_Temp, Salt_Reservoir, Coolant_Temp);
-		 HeatFlow(Coolant_Temp, Coolant_Volume, Water_Temp);
-		 Coolant_Temp := Coolant_Temp - Flow_Rate;
+		 HeatFlow(Coolant_Temp, Coolant_Volume, Reactor_Salt_Temp);		--Salt tranfsers heat into coolant
+		 HeatFlow(Reservoir_Temp, Salt_Reservoir, Coolant_Temp);		--Reservoir cooled by coolant
+		 HeatFlow(Reactor_Temp, Salt_Reactor, Reservoir_Temp);			--Cool salt from Reservoir flows into reactor
+		 HeatFlow(Coolant_Temp, Coolant_Volume, Water_Temp);			--Coolant water flows out and is replaced
+		 
 		 
 	  end Cool;
 	    
