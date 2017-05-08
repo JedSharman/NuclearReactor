@@ -164,6 +164,9 @@ package body Reactor_Simulation is
          cooler_salt.Flow(flow_rate, reactor_salt.CurrentTemperature, flowing_salt);
          reservoir_salt.Flow(flow_rate, cooler_salt.CurrentTemperature, flowing_salt);
          
+         if (ReactorTemperature > MAXIMUM_TEMPERATURE) then
+			raise SALT_OVERHEAT_EXCEPTION;
+		 end if;
           
       end Update;
 
