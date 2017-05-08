@@ -106,7 +106,7 @@ package body Reactor_Simulation is
             temp_difference := ((to_cool.CurrentTemperature - input_temp)/2.0)*heat_transfer_coefficient;
             to_cool.ChangeTemperature( -temp_difference);
             output_temp := input_temp + temp_difference;
-            Energy := temp_difference*Salt_Retainer.salt_level*Salt_Retainer.specific_heat_capacity;
+            Energy := to_cool.EnergyCalc(temp_difference);
       end Cool;
          
       function OutputTemp return Float is
@@ -147,6 +147,11 @@ package body Reactor_Simulation is
       begin
          temperature := temperature + amount_by;
       end ChangeTemperature;
+      
+      function EnergyCalc(heat : in Float) return Float is
+      begin
+		return heat * salt_level * specific_heat_capacity;
+      end EnergyCalc;
       
    end Salt_Retainer;
 

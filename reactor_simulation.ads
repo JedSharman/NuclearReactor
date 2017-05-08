@@ -10,6 +10,7 @@ package Reactor_Simulation is
       procedure Flow(amount_to_flow : in Float; temperature_of_flow : Float; amount_flowing : in out Float);
       function CurrentTemperature return Float;
       procedure ChangeTemperature(amount_by : in Float);
+      function EnergyCalc (heat : in Float) return Float;
       
   private
       salt_level : Float := Float(initial_level);
