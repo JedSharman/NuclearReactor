@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <vfs_file  />
+    <file_marker column=" 1" line=" 1">
+      <vfs_project  />
+      <vfs_file >C:\Users\jaeha\Documents\Swinburne\Real Time Programming\Assignment\NuclearReactor\reactor_simulation.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 40" line=" 10">
+      <vfs_project  />
+      <vfs_file >C:\Users\jaeha\Documents\Swinburne\Real Time Programming\Assignment\NuclearReactor\reactor_simulation.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1">
+      <vfs_project  />
+      <vfs_file >C:\Users\jaeha\Documents\Swinburne\Real Time Programming\Assignment\NuclearReactor\Main.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\jaeha\Documents\Swinburne\Real Time Programming\Assignment\NuclearReactor\reactor_simulation.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\jaeha\Documents\Swinburne\Real Time Programming\Assignment\NuclearReactor\Main.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

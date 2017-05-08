@@ -13,7 +13,7 @@ package body Reactor_Simulation is
 
             radical_neutron_count := Integer(Float(temp_number_reactions) * child_creation_rate);
 
-            output_energy := temp_number_reactions * energy_per_reaction;
+            output_energy := Float(temp_number_reactions * energy_per_reaction);
 
             if(particle_count <= 0) then
                particle_count := 0;
@@ -56,7 +56,7 @@ package body Reactor_Simulation is
          end if;
       end RemoveRadicals;
 
-      function Output return Integer is
+      function Output return Float is
       begin
          return output_energy;
       end Output;
@@ -98,33 +98,73 @@ package body Reactor_Simulation is
 
    end Control_Rod_Assembly;
    
-   protected body Coolant_Housing is
+   protected body Cooler is
+      
+      procedure Cool(to_cool : in out Salt_Retainer) is
+      begin
+            temp_difference := ((to_cool.CurrentTemperature - input_temp)/2.0)*heat_transfer_coefficient;
+            to_cool.ChangeTemperature( -temp_difference);
+            output_temp := input_temp + temp_difference;
+      end Cool;
+         
+      function OutputTemp return Float is
+      begin         
+            return output_temp;
+      end OutputTemp;
+         
+   end Cooler;
    
-	  procedure HeatFlow(OutTemp : out Float; SubjectVol: in Float; InTemp: out Float) is
-	  begin
-		OutTemp := OutTemp(SubjectVol/Flowrate) + (Intemp-OutTemp)*(Flowrate/SubjectVol);
-	  end HeatFlow;
-   
-	  procedure Cool (Heat : out Float) is
-	  begin
-	     Reactor_Salt_Temp := Reactor_Salt_Temp + Heat;					--Reactor heats salt
-																
-		 HeatFlow(Coolant_Temp, Coolant_Volume, Reactor_Salt_Temp);
-		 HeatFlow(Reservoir_Temp, Salt_Reservoir, Coolant_Temp);
-		 HeatFlow(Coolant_Temp, Coolant_Volume, Water_Temp);
-		 Coolant_Temp := Coolant_Temp - Flow_Rate;
-		 
-	  end Cool;
-	    
-   end Coolant_Housing;
+    protected body Salt_Retainer is
+      
+      procedure Flow( amount_to_flow : in Float; temperature_of_flow : Float; amount_flowing : in out Float) is
+      begin         
+         new_salt_level := amount_flowing + salt_level;
+         
+         --Tavg = (Ta*Ma + Tb*Mb)/(Ma+Mb)
+         temperature := (temperature * salt_level + temperature_of_flow * amount_flowing)/(new_salt_level);   
+           
+         salt_level := new_salt_level;
+         
+         if salt_level >= amount_to_flow then
+            salt_level := salt_level - amount_to_flow;
+            amount_flowing := amount_to_flow;
+            
+         else
+            raise SALT_EMPTY_EXCEPTION;
+         end if;
+      end Flow;
+      
+      function CurrentTemperature return Float is
+      begin
+       
+         return temperature;
+        
+      end CurrentTemperature;
+      
+      procedure ChangeTemperature(amount_by : in Float) is
+      begin
+         temperature := temperature + amount_by;
+      end ChangeTemperature;
+      
+   end Salt_Retainer;
 
     protected body Reactor_Housing is
     
       procedure Update is
       begin
-          the_core.React;
-          the_core.RemoveRadicals(the_control.Absorption);
-          cooling.Cool();
+         the_core.React;
+         the_core.RemoveRadicals(the_control.Absorption);
+         
+         reactor_salt.ChangeTemperature(the_core.Output);
+         
+         the_cooler.Cool(cooler_salt);
+         
+         --reactor -> cooler -> resivoir -> reactor         
+         reactor_salt.Flow(flow_rate, reservoir_salt.CurrentTemperature, flowing_salt);
+         cooler_salt.Flow(flow_rate, reactor_salt.CurrentTemperature, flowing_salt);
+         reservoir_salt.Flow(flow_rate, cooler_salt.CurrentTemperature, flowing_salt);
+         
+          
       end Update;
 
       function Depletion return Float is
@@ -152,6 +192,32 @@ package body Reactor_Simulation is
       begin
          the_control.SetAbsorptionPotential(set_to);
       end SetAbsorptionPotential;
+      
+      function FlowRate return Float is
+      begin
+         return flow_rate;
+      end FlowRate;
+      
+      procedure SetFlowRate(set_to : Float) is
+      begin
+         flow_rate := set_to;
+      end SetFlowRate;
+      
+      function ReservoirTemperature return Float is
+      begin
+         return reservoir_salt.CurrentTemperature;
+      end ReservoirTemperature;
+      
+      function ReactorTemperature return Float is
+      begin
+         return reactor_salt.CurrentTemperature;
+      end ReactorTemperature;
+      
+      function CoolerTemperature return Float is
+      begin
+         return cooler_salt.CurrentTemperature;
+      end CoolerTemperature;
+      
 
    end Reactor_Housing;
 

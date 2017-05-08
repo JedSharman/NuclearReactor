@@ -25,7 +25,12 @@ procedure Main is
 
       while(cham.Depletion > 0.0) loop
          temp_i := Integer(cham.Depletion);
-         Put_Line(temp_i'Img & "%");
+         --Put_Line(temp_i'Img & "%");
+         Put(Integer(cham.ReservoirTemperature)'Img & "; ");
+         Put(Integer(cham.ReactorTemperature)'Img & "; ");
+         Put(Integer(cham.CoolerTemperature)'Img & "; ");
+         New_Line;
+
          cham.Update;
 
          if temp_i <= 90 then

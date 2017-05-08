@@ -1,106 +1,145 @@
-V "GNAT Lib v4.9"
+V "GNAT Lib v2015"
 P ZX
 
 RN
+RV NO_EXCEPTIONS
 RV NO_FLOATING_POINT
 RV NO_PROTECTED_TYPES
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_ELABORATION_CODE
 RV SPARK_05
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U reactor_simulation%b	reactor_simulation.adb	97f667f5 NE OO PK
+U reactor_simulation%b	reactor_simulation.adb	e67c24a9 NE OO PK
+W ada.exceptions%s	a-except.adb		a-except.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
-U reactor_simulation%s	reactor_simulation.ads	39641890 EE NE OO PK
+U reactor_simulation%s	reactor_simulation.ads	c6caee89 EE OO PK
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
-D ada.ads		20070406091342 3ffc8e18
-D a-except.ads		20140129161953 f86a4103
-D a-unccon.ads		20070406091342 f9eb8f06
-D interfac.ads		20140225151838 69adb1b9
-D i-c.ads		20110801143639 5421119b
-D reactor_simulation.ads  20170502084543 39641890
-D reactor_simulation.adb  20170502084628 ae927f65
-D system.ads		20160213141829 90249111
-D s-atacco.ads		20120515093410 4c36d12f
-D s-exctab.ads		20140225151139 54135002
-D s-linux.ads		20140409145429 5b2f79a5
-D s-multip.ads		20101011073009 38ac9f73
-D s-oscons.ads		20160213141902 a445b120
-D s-osinte.ads		20140409145429 59011f13
-D s-parame.ads		20140225151139 ab8cb46a
-D s-soflin.ads		20140225151139 aa763b52
-D s-stache.ads		20140225151139 a37c21ec
-D s-stausa.ads		20110804134155 017a0a05
-D s-stalib.ads		20140225151139 a891183f
-D s-stoele.ads		20140225151139 2dc34a04
-D s-stoele.adb		20140225151139 ed88f8fb
-D s-tasinf.ads		20120730151500 21316953
-D s-taspri.ads		20110927094500 15f617a8
-D s-taskin.ads		20140131154341 3f821f32
-D s-taprob.ads		20110927094500 502249e3
-D s-traent.ads		20140225151139 b5116092
-D s-unstyp.ads		20140225151139 510692af
-X 6 reactor_simulation.ads
-1K9*Reactor_Simulation 67l5 67e23 7|1b14 147l5 147t23
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-c.ads		20150518132148 5421119b interfaces.c%s
+D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
+D reactor_simulation.ads  20170508045626 c6caee89 reactor_simulation%s
+D reactor_simulation.adb  20170508045646 20b6ca20 reactor_simulation%b
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-multip.ads		20150518132150 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20150518132150 2e5b26a9 system.os_interface%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stausa.ads		20150518132150 017a0a05 system.stack_usage%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20150518132150 601f6b72 system.task_info%s
+D s-taspri.ads		20150518132150 6c1d93d4 system.task_primitives%s
+D s-taskin.ads		20150518132150 339749f0 system.tasking%s
+D s-taprob.ads		20150518132150 502249e3 system.tasking.protected_objects%s
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-win32.ads		20150518132150 b7f96285 system.win32%s
+X 7 reactor_simulation.ads
+1K9*Reactor_Simulation 97l5 97e23 8|1b14 224l5 224t23
 3N4*REACTOR_TIME_STEP
-5W18*Fuel_Rod_Assembly 5d37 5d71 15E7 25l8 25e25 59r18 7|3b19 64l8 64t25
-5i37 Initial_Particle_Count{integer} 15r35
-5i71 Initial_Radical_Count{integer} 16r42
-6U17 React 7|5b17 28l11 28t16 114s20
-7U17 SetParticles 7>30 7|30b17 33l11 33t23 126s19
-7i30 set_to{integer} 7|30b30 32r28
-8U17 SetRadicals 8>29 7|35b17 38l11 38t22 132s19
-8i29 set_to{integer} 7|35b29 37r35
-9V16 Particles{integer} 7|40b16 43l11 43t20 121s34
-10V16 Radicals{integer} 7|45b16 48l11 48t19
-11U17 RemoveRadicals 11>32 7|50b17 57l11 57t25 115s20
-11i32 amount{integer} 7|50b32 52r59
-12V16 Output{integer} 7|59b16 62l11 62t17
-15i7 particle_count{integer} 7|7r13 12r13 12r31 18r16 19r16 32r10 42r17
-16i7 radical_neutron_count{integer} 7|10r67 14r13 24r13 37r10 47r17 52r10
+4N4*MAXIMUM_TEMPERATURE
+6X4*SALT_EMPTY_EXCEPTION 8|133r19
+7X4*SALT_OVERHEAT_EXCEPTION
+9W18*Salt_Retainer 9d32 9d57 15E7 22l7 22e20 58r39 91r22 92r21 93r24 8|103r39
+. 117b20 149l8 149t21
+9i32 initial_level{integer} 15r35
+9i57 initial_temperature{integer} 16r36
+10U17 Flow 10>22 10>49 10=78 8|119b17 135l11 135t15 163s23 164s22 165s25
+10f22 amount_to_flow{float} 8|119b23 128r27 129r40 130r31
+10f49 temperature_of_flow{float} 8|119b50 124r53
+10f78 amount_flowing{float} 8|119b79 121r28 124r75 130m13
+11V16 CurrentTemperature{float} 8|105s42 137b16 142l11 142t29 163s54 164s51
+. 165s53 208s32 213s30 218s29
+12U17 ChangeTemperature 12>35 8|106s21 144b17 147l11 147t28 158s23
+12f35 amount_by{float} 8|144b35 146r39
+15f7 salt_level{float} 8|121r45 124r40 126r10 128r13 129r13 129r27
+16f7 temperature{float} 8|124r10 124r26 140r17 146r10 146r25
+17f7 new_salt_level{float} 8|121r10 124r92 126r24
+20f7 specific_heat_capacity{float}
+24W18*Fuel_Rod_Assembly 24d37 24d71 34E7 44l8 44e25 84r18 8|3b19 64l8 64t25
+24i37 Initial_Particle_Count{integer} 34r35
+24i71 Initial_Radical_Count{integer} 35r42
+25U17 React 8|5b17 28l11 28t16 155s19
+26U17 SetParticles 26>30 8|30b17 33l11 33t23 177s19
+26i30 set_to{integer} 8|30b30 32r28
+27U17 SetRadicals 27>29 8|35b17 38l11 38t22 183s19
+27i29 set_to{integer} 8|35b29 37r35
+28V16 Particles{integer} 8|40b16 43l11 43t20 172s34
+29V16 Radicals{integer} 8|45b16 48l11 48t19
+30U17 RemoveRadicals 30>32 8|50b17 57l11 57t25 156s19
+30i32 amount{integer} 8|50b32 52r59
+31V16 Output{float} 8|59b16 62l11 62t17 158s50
+34i7 particle_count{integer} 8|7r13 12r13 12r31 18r16 19r16 32r10 42r17
+35i7 radical_neutron_count{integer} 8|10r67 14r13 24r13 37r10 47r17 52r10
 . 52r35 54r13 55r13
-17i7 output_energy{integer} 7|16r13 61r17
-20f7 child_creation_rate{float} 7|14r77
-21f7 ramping_rate{float} 7|10r46
-22i7 energy_per_reaction{integer} 7|16r54
-24i7 temp_number_reactions{integer} 7|10r13 12r48 14r52 16r30
-27W19*Control_Rod_Assembly 27d40 34E7 36l8 36e28 60r21 7|66b19 99l8 99t28
-27i40 absorption_potential{integer} 35r42
-28U17 Engage 28>24 7|68b17 82l11 82t17 137s22
-28f24 percentage{float} 7|68b24 71r29
-29U17 SetAbsorptionPotential 29>41 7|84b17 87l11 87t33 142s22
-29f41 amount{float} 7|84b41 86r32
-30V16 Engagment{float} 7|89b15 92l11 92t20
-31V16 Absorption{integer} 7|94b16 97l11 97t21 115s47
-34f7 internal_engagment{float} 7|81r10 91r17 96r25
-35f7 maximum_absorption{float} 7|86r10 96r44
-38W19*Coolant_Housing 43E11 48l8 48e23 61r18 7|101b19 108l8 108t23
-40U17 Cool 40>22 7|103b21 106l15 106t19
-40f22 Heat{float} 7|103b27 105r45
-43f11 Salt_Heated{float}
-44f11 Salt_Reactor{float}
-45f11 Salt_Reservoir{float}
-46f11 Coolant_Temp{float} 7|105r14 105r30
-50W19*Reactor_Housing 59E7 64l8 64e23 7|110b20 145l8 145t23
-51U17 Update 7|112b17 117l11 117t17
-52V16 Depletion{float} 7|119b16 122l11 122t20
-53U17 SetParticles 53>31 7|124b17 128l11 128t23
-53i31 particles_tc{integer} 7|124b31 126r32 127r26
-54U17 SetRadicals 54>30 7|130b17 133l11 133t22
-54i30 radicals_tc{integer} 7|130b30 132r31
-55U17 SetEngagment 55>30 7|135b17 138l11 138t23
-55f30 percentage{float} 7|135b30 137r29
-56U17 SetAbsorptionPotential 56>40 7|140b17 143l11 143t33
-56f40 set_to{float} 7|140b40 142r45
-59w7 the_core{5W18} 7|114r11 115r11 121r25 126r10 132r10
-60w7 the_control{27W19} 7|115r35 137r10 142r10
-61w7 cooling{38W19}
-62i7 initial_fuel{integer} 7|121r57 127r10
-X 7 reactor_simulation.adb
+36f7 output_energy{float} 8|16r13 61r17
+39f7 child_creation_rate{float} 8|14r77
+40f7 ramping_rate{float} 8|10r46
+41i7 energy_per_reaction{integer} 8|16r60
+43i7 temp_number_reactions{integer} 8|10r13 12r48 14r52 16r36
+46W19*Control_Rod_Assembly 46d40 53E7 55l8 55e28 85r21 8|66b19 99l8 99t28
+46i40 absorption_potential{integer} 54r42
+47U17 Engage 47>24 8|68b17 82l11 82t17 188s22
+47f24 percentage{float} 8|68b24 71r29
+48U17 SetAbsorptionPotential 48>41 8|84b17 87l11 87t33 193s22
+48f41 amount{float} 8|84b41 86r32
+49V16 Engagment{float} 8|89b15 92l11 92t20
+50V16 Absorption{integer} 8|94b16 97l11 97t21 156s46
+53f7 internal_engagment{float} 8|81r10 91r17 96r25
+54f7 maximum_absorption{float} 8|86r10 96r44
+57W19*Cooler 57d26 57d50 62E7 66l8 66e14 86r20 8|101b19 115l8 115t14
+57i26 coolant_temp{integer} 62r35 63r36
+57i50 transfer_coefficient{integer} 64r50
+58U17 Cool 58=22 8|103b17 108l11 108t15 160s21
+58w22 to_cool{9W18} 8|103b22 105r34 106r13
+59V16 OutputTemp{float} 8|110b16 113l11 113t21
+62f7 input_temp{float} 8|105r63 107r28
+63f7 output_temp{float} 8|107r13 112r20
+64f7 heat_transfer_coefficient{float} 8|105r80
+65f7 temp_difference{float} 8|105r13 106r41 107r41
+68W19*Reactor_Housing 84E7 95l8 95e23 8|151b20 222l8 222t23
+69U17 Update 8|153b17 168l11 168t17
+70V16 Depletion{float} 8|170b16 173l11 173t20
+71U17 SetParticles 71>31 8|175b17 179l11 179t23
+71i31 particles_tc{integer} 8|175b31 177r32 178r26
+72U17 SetRadicals 72>30 8|181b17 184l11 184t22
+72i30 radicals_tc{integer} 8|181b30 183r31
+73U17 SetEngagment 73>30 8|186b17 189l11 189t23
+73f30 percentage{float} 8|186b30 188r29
+74U17 SetAbsorptionPotential 74>40 8|191b17 194l11 194t33
+74f40 set_to{float} 8|191b40 193r45
+76V16 FlowRate{float} 8|196b16 199l11 199t19
+77U17 SetFlowRate 77>29 8|201b17 204l11 204t22
+77f29 set_to{float} 8|201b29 203r23
+79V16 ReservoirTemperature{float} 8|206b16 209l11 209t31
+80V16 ReactorTemperature{float} 8|211b16 214l11 214t29
+81V16 CoolerTemperature{float} 8|216b16 219l11 219t28
+84w7 the_core{24W18} 8|155r10 156r10 158r41 172r25 177r10 183r10
+85w7 the_control{46W19} 8|156r34 188r10 193r10
+86w7 the_cooler{57W19} 8|160r10
+87i7 initial_fuel{integer} 8|172r57 178r10
+89f7 flow_rate{float} 8|163r28 164r27 165r30 198r17 203r10
+90f7 flowing_salt{float} 8|163r74 164r71 165r73
+91w7 reactor_salt{9W18} 8|158r10 163r10 164r38 213r17
+92w7 cooler_salt{9W18} 8|160r26 164r10 165r41 218r17
+93w7 reservoir_salt{9W18} 8|163r39 165r10 208r17
+X 8 reactor_simulation.adb
 69f10 temp_percentage{float} 71m10 73r13 74m13 77r13 78m13 81r32
-X 18 s-stausa.ads
+X 17 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 
