@@ -167,6 +167,12 @@ package body Reactor_Simulation is
          if (ReactorTemperature > MAXIMUM_TEMPERATURE) then
 			raise SALT_OVERHEAT_EXCEPTION;
 		 end if;
+		 if (ReservoirTemperature > MAXIMUM_TEMPERATURE) then
+			raise SALT_OVERHEAT_EXCEPTION;
+		 end if;
+		 if (CoolerTemperature > MAXIMUM_TEMPERATURE) then
+			raise SALT_OVERHEAT_EXCEPTION;
+		 end if;
           
       end Update;
 
