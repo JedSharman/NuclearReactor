@@ -101,10 +101,12 @@ package body Reactor_Simulation is
    protected body Cooler is
       
       procedure Cool(to_cool : in out Salt_Retainer) is
+		Energy : Float;
       begin
             temp_difference := ((to_cool.CurrentTemperature - input_temp)/2.0)*heat_transfer_coefficient;
             to_cool.ChangeTemperature( -temp_difference);
             output_temp := input_temp + temp_difference;
+            Energy := temp_difference*Salt_Retainer.salt_level*Salt_Retainer.specific_heat_capacity;
       end Cool;
          
       function OutputTemp return Float is
