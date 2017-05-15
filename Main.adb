@@ -1,4 +1,5 @@
 with Protected_Shared_Value; use Protected_Shared_Value;
+with User_Interface; use User_Interface;
 with Ada.Text_IO; use Ada.Text_IO;
 with Reactor_Simulation; use Reactor_Simulation;
 
@@ -16,6 +17,8 @@ procedure Main is
    task body Reaction_Chamber is
       temp_i : Integer;
    begin
+      Initialise;
+      if AuthoriseUser = True then
       --cont.Engage(0.0);
       cham.SetParticles(1000);
       cham.SetRadicals(1);
@@ -38,7 +41,8 @@ procedure Main is
          end if;
 
          delay REACTOR_TIME_STEP;
-      end loop;
+         end loop;
+         end if;
    end Reaction_Chamber;
 
 begin

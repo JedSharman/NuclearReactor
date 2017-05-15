@@ -1,5 +1,10 @@
 V "GNAT Lib v2015"
 M P W=b
+A -O2
+A -gnatA
+A -g
+A -mtune=generic
+A -march=pentiumpro
 P ZX
 
 RN
@@ -7,6 +12,7 @@ RV NO_DELAY
 RV NO_FIXED_POINT
 RV NO_FLOATING_POINT
 RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
 RV NO_LOCAL_PROTECTED_OBJECTS
 RV NO_RELATIVE_DELAY
 RV NO_STANDARD_STORAGE_POOLS
@@ -14,11 +20,12 @@ RV NO_TASK_HIERARCHY
 RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 RV MAX_TASKS=1+
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U main%b		main.adb		16bb3e44 NE OO SU
+U main%b		main.adb		23b6f5b5 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
@@ -28,13 +35,13 @@ W ada.text_io%s		a-textio.adb		a-textio.ali
 W protected_shared_value%s  protected_shared_value.adb  protected_shared_value.ali
 W reactor_simulation%s	reactor_simulation.adb	reactor_simulation.ali
 W system%s		system.ads		system.ali
-W system.concat_2%s	s-conca2.adb		s-conca2.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.task_info%s	s-tasinf.adb		s-tasinf.ali
 W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+W user_interface%s	user_interface.adb	user_interface.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
 D a-calend.ads		20150518132148 d986d312 ada.calendar%s
@@ -50,12 +57,11 @@ D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D main.adb		20170508045412 280dc6de main%b
-D protected_shared_value.ads  20170423123524 c011e3c7 protected_shared_value%s
-D reactor_simulation.ads  20170508045626 c6caee89 reactor_simulation%s
+D main.adb		20170513041202 af36336e main%b
+D protected_shared_value.ads  20170511004836 c011e3c7 protected_shared_value%s
+D reactor_simulation.ads  20170511004836 249601a3 reactor_simulation%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
-D s-conca2.ads		20150518132148 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
@@ -78,38 +84,43 @@ D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 D s-win32.ads		20150518132150 b7f96285 system.win32%s
+D user_interface.ads	20170515030958 506ad16b user_interface%s
 X 1 ada.ads
-16K9*Ada 19e8 15|2r6 2r23
+16K9*Ada 19e8 15|3r6 3r23
 X 9 a-textio.ads
-49K13*Text_IO 471e16 15|2w10 2r27
-166U14*New_Line 15|32s10
-242U14*Put 15|29s10 30s10 31s10
+49K13*Text_IO 471e16 15|3w10 3r27
+166U14*New_Line 15|35s10
+242U14*Put 15|32s10 33s10 34s10
 X 15 main.adb
-5U11*Main 5b11 47l5 47t9
-7w4 reaction_chamber_temperature{16|3W19}
-9w4 fuelt{17|24W18}
-11w4 cham{17|68W19} 20r7 21r7 23r7 24r7 26r13 27r28 29r22 30r22 31r22 34r10
-. 37r13
-14t9 Reaction_Chamber 16b14 42l8 42t24
-17i7 temp_i{integer} 27m10 36r13
+6U11*Main 6b11 51l5 51t9
+8w4 reaction_chamber_temperature{16|3W19}
+10w4 fuelt{17|25W18}
+12w4 cham{17|69W19} 23r7 24r7 26r7 27r7 29r13 30r28 32r22 33r22 34r22 37r10
+. 40r13
+15t9 Reaction_Chamber 17b14 46l8 46t24
+18i7 temp_i{integer} 30m10 39r13
 X 16 protected_shared_value.ads
 1K9*Protected_Shared_Value 15|1w6 1r34 16|13e27
-3W19*Shared_Integer 15|7r35 16|11e22
+3W19*Shared_Integer 15|8r35 16|11e22
 X 17 reactor_simulation.ads
-1K9*Reactor_Simulation 15|3w6 3r30 17|97e23
-3N4*REACTOR_TIME_STEP 15|40r16
-24W18*Fuel_Rod_Assembly 15|9r20 17|44e25
-68W19*Reactor_Housing 15|11r11 17|95e23
-69U17 Update 15|34s15
-70V16 Depletion{float} 15|26s18 27s33
-71U17 SetParticles 15|20s12
-72U17 SetRadicals 15|21s12
-73U17 SetEngagment 15|24s12 37s18
-74U17 SetAbsorptionPotential 15|23s12
-79V16 ReservoirTemperature{float} 15|29s27
-80V16 ReactorTemperature{float} 15|30s27
-81V16 CoolerTemperature{float} 15|31s27
-X 30 s-stausa.ads
+1K9*Reactor_Simulation 15|4w6 4r30 17|98e23
+3N4*REACTOR_TIME_STEP 15|43r16
+25W18*Fuel_Rod_Assembly 15|10r20 17|45e25
+69W19*Reactor_Housing 15|12r11 17|96e23
+70U17 Update 15|37s15
+71V16 Depletion{float} 15|29s18 30s33
+72U17 SetParticles 15|23s12
+73U17 SetRadicals 15|24s12
+74U17 SetEngagment 15|27s12 40s18
+75U17 SetAbsorptionPotential 15|26s12
+80V16 ReservoirTemperature{float} 15|32s27
+81V16 ReactorTemperature{float} 15|33s27
+82V16 CoolerTemperature{float} 15|34s27
+X 29 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 42 user_interface.ads
+1K9*User_Interface 15|2w6 2r26 42|11e22
+8U14*Initialise 15|20s7
+9V13*AuthoriseUser{boolean} 15|21s10
 

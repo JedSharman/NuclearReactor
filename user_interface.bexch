@@ -1,0 +1,22 @@
+[MAPPING FILE]
+C:\Users\jboy_\Desktop\RTP\Nuclear\GNAT-TEMP-000001.TMP
+[TOOLCHAIN VERSION]
+ada
+GNAT 2015
+[MAIN BASE NAME]
+user_interface
+[COMPILER PATH]
+c:\gnat\2015\bin\gcc.exe
+[COMPILER LEADING SWITCHES]
+-c
+-x
+ada
+-gnatA
+[MAIN DEPENDENCY FILE]
+C:\Users\jboy_\Desktop\RTP\Nuclear\user_interface.ali
+[DEPENDENCY FILES]
+[BINDING OPTIONS]
+gnatbind_prefix=
+[PROJECT FILES]
+C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr
+20170511004836

@@ -1,8 +1,14 @@
-V "GNAT Lib v4.9"
+V "GNAT Lib v2015"
+A -O2
+A -gnatA
+A -g
+A -mtune=generic
+A -march=pentiumpro
 P ZX
 
 RN
 RV NO_PROTECTED_TYPES
+RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
 U protected_shared_value%b  protected_shared_value.adb  1346e8ca NE OO PK
@@ -13,44 +19,43 @@ U protected_shared_value%s  protected_shared_value.ads  c011e3c7 EE NE OO PK
 W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
-D ada.ads		20070406091342 3ffc8e18
-D a-except.ads		20140129161953 f86a4103
-D a-unccon.ads		20070406091342 f9eb8f06
-D interfac.ads		20140225151838 69adb1b9
-D i-c.ads		20110801143639 5421119b
-D protected_shared_value.ads  20170429124519 c011e3c7
-D protected_shared_value.adb  20170429124519 d3570b0d
-D system.ads		20160213141829 90249111
-D s-atacco.ads		20120515093410 4c36d12f
-D s-exctab.ads		20140225151139 54135002
-D s-linux.ads		20140409145429 5b2f79a5
-D s-multip.ads		20101011073009 38ac9f73
-D s-oscons.ads		20160213141902 a445b120
-D s-osinte.ads		20140409145429 59011f13
-D s-parame.ads		20140225151139 ab8cb46a
-D s-soflin.ads		20140225151139 aa763b52
-D s-stache.ads		20140225151139 a37c21ec
-D s-stausa.ads		20110804134155 017a0a05
-D s-stalib.ads		20140225151139 a891183f
-D s-stoele.ads		20140225151139 2dc34a04
-D s-stoele.adb		20140225151139 ed88f8fb
-D s-tasinf.ads		20120730151500 21316953
-D s-taspri.ads		20110927094500 15f617a8
-D s-taskin.ads		20140131154341 3f821f32
-D s-taprob.ads		20110927094500 502249e3
-D s-traent.ads		20140225151139 b5116092
-D s-unstyp.ads		20140225151139 510692af
-X 6 protected_shared_value.ads
-1K9*Protected_Shared_Value 13l5 13e27 7|1b14 24l5 24t27
-3W19*Shared_Integer 3d34 10E7 11l8 11e22 7|3b19 22l8 22t22
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-c.ads		20150518132148 5421119b interfaces.c%s
+D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
+D protected_shared_value.ads  20170511004836 c011e3c7 protected_shared_value%s
+D protected_shared_value.adb  20170511004836 d3570b0d protected_shared_value%b
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-multip.ads		20150518132150 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20150518132150 2e5b26a9 system.os_interface%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stausa.ads		20150518132150 017a0a05 system.stack_usage%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20150518132150 601f6b72 system.task_info%s
+D s-taspri.ads		20150518132150 6c1d93d4 system.task_primitives%s
+D s-taskin.ads		20150518132150 339749f0 system.tasking%s
+D s-taprob.ads		20150518132150 502249e3 system.tasking.protected_objects%s
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-win32.ads		20150518132150 b7f96285 system.win32%s
+X 7 protected_shared_value.ads
+1K9*Protected_Shared_Value 13l5 13e27 8|1b14 24l5 24t27
+3W19*Shared_Integer 3d34 10E7 11l8 11e22 8|3b19 22l8 22t22
 3i34 Initial_Value{integer} 10r29
-5V16 Read{integer} 7|5b16 9l11 9t15
-6U17 Write 6>28 7|11b17 15l11 15t16
-6i28 New_Value{integer} 7|11b24 14r22
-7U17 Increment 7>28 7|17b17 21l11 21t20
-7i28 By{integer} 7|17b28 20r33
-10i7 The_Data{integer} 7|8r17 14r10 20r10 20r22
-X 18 s-stausa.ads
+5V16 Read{integer} 8|5b16 9l11 9t15
+6U17 Write 6>28 8|11b17 15l11 15t16
+6i28 New_Value{integer} 8|11b24 14r22
+7U17 Increment 7>28 8|17b17 21l11 21t20
+7i28 By{integer} 8|17b28 20r33
+10i7 The_Data{integer} 8|8r17 14r10 20r10 20r22
+X 17 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 
