@@ -113,6 +113,14 @@ package body Reactor_Simulation is
       begin         
             return output_temp;
       end OutputTemp;
+      
+      function EnergyCalc() return Float is --Power = (Pressure at current temp - Pressure 1 atmosphere) * turbine factor
+      begin
+			float inputlogpressure = (-7.90298)(373.15/input_temp - 1) + (5.02808) * Log(373.15 / input_temp) - (1.3816) * 
+			((10**7)(10**(11.344((1-input_temp)/373.15))-1) + (8.1328)*(10**(-3))(10**(-3.49149(373.15/(input_temp -1)))-1)
+			+ Log(1013.25); -- Goff Grach eqn from wikipedia
+      end EnergyCalc;   
+         
          
    end Cooler;
    
