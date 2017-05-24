@@ -1,4 +1,7 @@
+with Ada.Numerics.Generic_Elementary_Functions; use Ada.Numerics.Generic_Elementary_Functions; 
+
 package Reactor_Simulation is
+
 
    REACTOR_TIME_STEP : constant := 0.05;
    MAXIMUM_TEMPERATURE : constant := 2500.0;

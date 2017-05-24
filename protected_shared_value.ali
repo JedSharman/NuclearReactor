@@ -18,8 +18,8 @@ D a-except.ads		20140129161953 f86a4103
 D a-unccon.ads		20070406091342 f9eb8f06
 D interfac.ads		20140225151838 69adb1b9
 D i-c.ads		20110801143639 5421119b
-D protected_shared_value.ads  20170429124519 c011e3c7
-D protected_shared_value.adb  20170429124519 d3570b0d
+D protected_shared_value.ads  20170524055358 c011e3c7
+D protected_shared_value.adb  20170524055358 d3570b0d
 D system.ads		20160213141829 90249111
 D s-atacco.ads		20120515093410 4c36d12f
 D s-exctab.ads		20140225151139 54135002
