@@ -120,13 +120,15 @@ package body Reactor_Simulation is
       outputlogpressure : Float;
       difflogpressure : Float;
       diffpressure : Float;
+      energy : Float;
+      conversionfactor : Float := 0.6;
       
       begin
-			inputlogpressure := (-7.90298)(373.15/input_temp - 1) + (5.02808) * Log(373.15 / input_temp) - (1.3816) * 
+			inputlogpressure := (-7.90298)(373.15/(input_temp) - 1) + (5.02808) * Log(373.15 / input_temp) - (1.3816) * 
 			((10**7)(10**(11.344((1-input_temp)/373.15))-1) + (8.1328)*(10**(-3))(10**(-3.49149(373.15/(input_temp -1)))-1)
 			+ Log(1013.25); -- Goff-Gratch eqn from wikipedia
 			
-			outputlogpressure := (-7.90298)(373.15/output_temp - 1) + (5.02808) * Log(373.15 / output_temp) - (1.3816) * 
+			outputlogpressure := (-7.90298)(373.15/(output_temp) - 1) + (5.02808) * Log(373.15 / output_temp) - (1.3816) * 
 			((10**7)(10**(11.344((1-output_temp)/373.15))-1) + (8.1328)*(10**(-3))(10**(-3.49149(373.15/(output_temp -1)))-1)
 			+ Log(1013.25); -- Goff-Gratch eqn from wikipedia
 			
@@ -134,7 +136,9 @@ package body Reactor_Simulation is
 			
 			diffpressure := 2.71828**difflogpressure;
 			
-			return diffpressure;
+			energy := diffressure*conversionfactor;
+			
+			return energy;
 			
       end EnergyCalc;   
          

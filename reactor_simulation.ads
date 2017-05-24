@@ -57,6 +57,7 @@ package Reactor_Simulation is
    
    protected type Cooler(coolant_temp : Integer; transfer_coefficient : Integer) is
       procedure Cool(to_cool : in out Salt_Retainer);
+      function EnergyCalc return Float;
       function OutputTemp return Float;      
       
    private
