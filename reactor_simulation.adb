@@ -115,37 +115,40 @@ package body Reactor_Simulation is
       end OutputTemp;
       
       function EnergyCalc return Float is --Power = (Pressure at current temp - Pressure 1 atmosphere) * turbine factor
-      
-      inputlogpressure : Float;
-      outputlogpressure : Float;
-      difflogpressure : Float;
-      diffpressure : Float;
+      --inputlogpressure : Float;
+      --outputlogpressure : Float;
+      --difflogpressure : Float;
+      --diffpressure : Float;
       energy : Float;
       conversionfactor : Float := 0.6;
       
       begin
-			inputlogpressure := -7.90298;
-			inputlogpressure := inputlogpressure * 373.15;
-			inputlogpressure := inputlogpressure / (input_temp - 1.0);
-			inputlogpressure := inputlogpressure  + (5.02808) * Log(373.15 / input_temp);
-			inputlogpressure := inputlogpressure - (1.3816) * (10.0**7.0)*(10.0**(11.344 * ((1.0-input_temp)/373.15))-1.0);
-			inputlogpressure := inputlogpressure + (8.1328)*(10.0**(-3.0))*(10.0**(-3.49149*(373.15/(input_temp -1.0)))-1.0);
-			inputlogpressure := inputlogpressure + Log(1013.25);
-			 -- Goff-Gratch eqn from wikipedia
+      
+			-- Goff-Gratch eqn from wikipedia
+--			inputlogpressure := -7.90298;
+--			inputlogpressure := inputlogpressure * 373.15;
+--			inputlogpressure := inputlogpressure / (input_temp - 1.0);
+--			inputlogpressure := inputlogpressure  + (5.02808) * Log(373.15 / input_temp);
+--			inputlogpressure := inputlogpressure - (1.3816) * (10.0**7.0)*(10.0**(11.344 * ((1.0-input_temp)/373.15))-1.0);
+--			inputlogpressure := inputlogpressure + (8.1328)*(10.0**(-3.0))*(10.0**(-3.49149*(373.15/(input_temp -1.0)))-1.0);
+--			inputlogpressure := inputlogpressure + Log(1013.25);
+
 			 
-			outputlogpressure := -7.90298;
-			outputlogpressure := outputlogpressure * 373.15;
-			outputlogpressure := outputlogpressure / (output_temp - 1.0);
-			outputlogpressure := outputlogpressure  + (5.02808) * Log(373.15 / output_temp);
-			outputlogpressure := outputlogpressure - (1.3816) * (10.0**7.0)*(10.0**(11.344 * ((1.0-output_temp)/373.15))-1.0);
-			outputlogpressure := outputlogpressure + (8.1328)*(10.0**(-3.0))*(10.0**(-3.49149*(373.15/(output_temp -1.0)))-1.0);
-			outputlogpressure := outputlogpressure + Log(1013.25);
-			
-			difflogpressure := outputlogpressure - inputlogpressure;
-			
-			diffpressure := 2.71828**difflogpressure;
-			
-			energy := diffpressure*conversionfactor;
+--			outputlogpressure := -7.90298;
+--			outputlogpressure := outputlogpressure * 373.15;
+--			outputlogpressure := outputlogpressure / (output_temp - 1.0);
+--			outputlogpressure := outputlogpressure  + (5.02808) * Log(373.15 / output_temp);
+--			outputlogpressure := outputlogpressure - (1.3816) * (10.0**7.0)*(10.0**(11.344 * ((1.0-output_temp)/373.15))-1.0);
+--			outputlogpressure := outputlogpressure + (8.1328)*(10.0**(-3.0))*(10.0**(-3.49149*(373.15/(output_temp -1.0)))-1.0);
+--			outputlogpressure := outputlogpressure + Log(1013.25);
+--			
+--			difflogpressure := outputlogpressure - inputlogpressure;
+--			
+--			diffpressure := 2.71828**difflogpressure;
+--			
+--			energy := diffpressure*conversionfactor;
+
+			energy := (output_temp - input_temp) * conversionfactor;
 			
 			return energy;
 			

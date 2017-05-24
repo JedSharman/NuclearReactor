@@ -1,4 +1,3 @@
-with Ada.Numerics.Generic_Elementary_Functions; use Ada.Numerics.Generic_Elementary_Functions; 
 
 package Reactor_Simulation is
 
@@ -61,7 +60,7 @@ package Reactor_Simulation is
    protected type Cooler(coolant_temp : Integer; transfer_coefficient : Integer) is
       procedure Cool(to_cool : in out Salt_Retainer);
       function EnergyCalc return Float;
-      function OutputTemp return Float;      
+      function OutputTemp return Float; 
       
    private
       input_temp : Float := Float(coolant_temp);
