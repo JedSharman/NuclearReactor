@@ -21,68 +21,68 @@
   </Project>
   <Project >
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\Main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 4" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\Main.adb</vfs_file>
+      <vfs_project />
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\user_interface.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\reactor_simulation.adb</vfs_file>
+      <vfs_project />
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\user_interface.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 51" >
+      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\user_interface.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 45" >
+      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\user_interface.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 48" >
+      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\user_interface.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\protected_shared_value.ads</vfs_file>
+      <vfs_project />
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\user_interface.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 20" line=" 20" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\Main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\user_interface.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 4" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\user_interface.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 22" line=" 21" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\user_interface.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 23" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\user_interface.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 1" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\user_interface.adb</vfs_file>
+    <file_marker column=" 25" line=" 11" >
+      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\user_interface.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\protected_shared_value.ads</vfs_file>
+      <vfs_project />
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\Main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 66" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\reactor_simulation.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\protected_shared_value.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 66" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\reactor_simulation.adb</vfs_file>
+    <file_marker column=" 19" line=" 14" >
+      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\Main.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\reactor_simulation.ads</vfs_file>
+      <vfs_project />
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\command.ali</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 14" line=" 1" >
-      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear\user_interface.adb</vfs_file>
+    <file_marker column=" 33" line=" 17" >
+      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\Main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\command.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 14" >
+      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\Main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 17" >
+      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\command.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 17" >
+      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\command_list.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 17" >
+      <vfs_project>C:\Users\jboy_\Desktop\RTP\Nuclear2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jboy_\Desktop\RTP\Nuclear2\command.ads</vfs_file>
     </file_marker>
   </Project>
   <Project >

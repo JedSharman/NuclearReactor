@@ -29,8 +29,22 @@ package Int_Io renames Ada.Integer_Text_Io;
          Put_Line("Invalid Login");
          return False;
       end if;
-
-
    end AuthoriseUser;
+
+   procedure Output (text : in String; ln : in Boolean) is
+   begin
+      if ln = False then
+         Put_Line(text);
+      else
+         Put(text);
+      end if;
+   end Output;
+
+   procedure RunCommand is
+      begin
+      Put_Line("The following Commands are available:");
+
+
+      end RunCommand;
 
    end User_Interface;

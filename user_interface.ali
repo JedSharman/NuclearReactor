@@ -1,13 +1,19 @@
-V "GNAT Lib v4.9"
+V "GNAT Lib v2015"
+A -O2
+A -gnatA
+A -g
+A -mtune=generic
+A -march=pentiumpro
 P ZX
 
 RN
 RV NO_ENUMERATION_MAPS
 RV NO_IO
 RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U user_interface%b	user_interface.adb	3ec4a5e8 NE OO PK
+U user_interface%b	user_interface.adb	752f3968 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -15,66 +21,64 @@ W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
 
-U user_interface%s	user_interface.ads	506ad16b EE NE OO PK
+U user_interface%s	user_interface.ads	2926cc9a EE NE OO PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 
-D ada.ads		20070406091342 3ffc8e18
-D a-except.ads		20140129161953 f86a4103
-D a-finali.ads		20111121113555 52ecdc1b
-D a-inteio.ads		20070406091342 f64b89a4
-D a-ioexce.ads		20140225151544 e4a01f64
-D a-stream.ads		20140122164720 1a984740
-D a-tags.ads		20111212115430 6c0509d0
-D a-textio.ads		20140129155348 386df5d4
-D a-tiinio.ads		20090409150019 aa04e5d6
-D a-unccon.ads		20070406091342 f9eb8f06
-D interfac.ads		20140225151838 69adb1b9
-D i-cstrea.ads		20130412125801 8128536b
-D system.ads		20160213141829 90249111
-D s-crtl.ads		20140225151544 840e6817
-D s-exctab.ads		20140225151139 54135002
-D s-ficobl.ads		20120709130952 55a71d43
-D s-finmas.ads		20140225151139 814daec4
-D s-finroo.ads		20120426095924 4ff27390
-D s-imenne.ads		20140225151139 614c06c0
-D s-parame.ads		20140225151139 ab8cb46a
-D s-pooglo.ads		20110804083314 542f33d0
-D s-soflin.ads		20140225151139 aa763b52
-D s-stache.ads		20140225151139 a37c21ec
-D s-stalib.ads		20140225151139 a891183f
-D s-stoele.ads		20140225151139 2dc34a04
-D s-stoele.adb		20140225151139 ed88f8fb
-D s-stopoo.ads		20131010103753 b16154c2
-D s-traent.ads		20140225151139 b5116092
-D s-unstyp.ads		20140225151139 510692af
-D s-wchcon.ads		20140225151139 1b7d22d2
-D user_interface.ads	20170524055358 506ad16b
-D user_interface.adb	20170524055358 a08808f3
+D ada.ads		20150518132148 3ffc8e18 ada%s
+D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-inteio.ads		20150518132148 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
+D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
+D a-tiinio.ads		20150518132148 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
+D system.ads		20150518132150 f4ce8c3a system%s
+D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
+D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-imenne.ads		20150518132148 614c06c0 system.img_enum_new%s
+D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
+D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
+D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
+D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
+D user_interface.ads	20170525010606 2926cc9a user_interface%s
+D user_interface.adb	20170525010416 922f8982 user_interface%b
 X 1 ada.ads
-16K9*Ada 19e8 32|1r6 1r23 2r6 5r24
-X 4 a-inteio.ads
-18K13*Integer_Text_IO[9|45] 32|2w10 5r28
-X 8 a-textio.ads
-49K13*Text_IO 471e16 32|1w10 1r27
-169U14*Skip_Line 32|20s30 23s28
-242U14*Put 32|19s7 22s7 25s10
-263U14*Put_Line 32|9s17 11s17 26s10 29s10
-X 9 a-tiinio.ads
-55U14*Get 32|20s14[4|18] 23s14[4|18]
-X 31 user_interface.ads
-1K9*User_Interface 11l8 11e22 32|4b14 36l8 36t22
-3E9*User 3e42 4r28 32|17r19 21r23
+16K9*Ada 19e8 26|1r6 1r23 2r6 5r24
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 26|2w10 5r28
+X 7 a-textio.ads
+49K13*Text_IO 471e16 26|1w10 1r27
+169U14*Skip_Line 26|20s30 23s28
+242U14*Put 26|19s7 22s7 25s10 39s10
+263U14*Put_Line 26|9s17 11s17 26s10 29s10 37s10 45s7
+X 8 a-tiinio.ads
+56U14*Get 26|20s14[3|18] 23s14[3|18]
+X 25 user_interface.ads
+1K9*User_Interface 13l8 13e22 26|4b14 50l8 50t22
+3E9*User 3e42 4r28 26|17r19 21r23
 3n18*Jed{3E9}
 3n23*Jordan{3E9}
 3n31*Liam{3E9}
 3n37*Sudo{3E9}
 4A9*Password(integer)<3E9> 5r18
-5a4*pw{4A9} 32|24r10
-8U14*Initialise 32|7b14 13l13 13t23
-9V13*AuthoriseUser{boolean} 32|15b13 34l8 34t21
-X 32 user_interface.adb
+5a4*pw{4A9} 26|24r10
+8U14*Initialise 26|7b14 13l13 13t23
+9V13*AuthoriseUser{boolean} 26|15b13 32l8 32t21
+10U14*Output 10>22 10>40 26|34b14 41l8 41t14
+10a22 text{string} 26|34b22 37r19 39r14
+10b40 ln{boolean} 26|34b40 36r10
+11U14*RunCommand 26|43b14 48l11 48t21
+X 26 user_interface.adb
 5K9 Int_Io=5:28 20r7 23r7
 16i4 temp_user{integer} 20m18 21r37
 16i15 temp_pw{integer} 23m18 24r29
-17e4 current_user{31|3E9} 21m7 24r13 26r19
+17e4 current_user{25|3E9} 21m7 24r13 26r19
 

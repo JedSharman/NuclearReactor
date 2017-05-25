@@ -35,7 +35,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#23b6f5b5#;
+   u00001 : constant Version_32 := 16#8bb7684f#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#fbff4c67#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -289,9 +289,9 @@ package ada_main is
    pragma Export (C, u00126, "ada__exceptions__is_null_occurrenceB");
    u00127 : constant Version_32 := 16#9a9e8fd3#;
    pragma Export (C, u00127, "ada__exceptions__is_null_occurrenceS");
-   u00128 : constant Version_32 := 16#4cdbb94e#;
+   u00128 : constant Version_32 := 16#23570cbc#;
    pragma Export (C, u00128, "reactor_simulationB");
-   u00129 : constant Version_32 := 16#249601a3#;
+   u00129 : constant Version_32 := 16#f5db81a8#;
    pragma Export (C, u00129, "reactor_simulationS");
    u00130 : constant Version_32 := 16#d6fbdf05#;
    pragma Export (C, u00130, "system__tasking__stagesB");
@@ -341,9 +341,9 @@ package ada_main is
    pragma Export (C, u00152, "system__traces__taskingB");
    u00153 : constant Version_32 := 16#3fb127e5#;
    pragma Export (C, u00153, "system__traces__taskingS");
-   u00154 : constant Version_32 := 16#3ec4a5e8#;
+   u00154 : constant Version_32 := 16#752f3968#;
    pragma Export (C, u00154, "user_interfaceB");
-   u00155 : constant Version_32 := 16#506ad16b#;
+   u00155 : constant Version_32 := 16#2926cc9a#;
    pragma Export (C, u00155, "user_interfaceS");
    u00156 : constant Version_32 := 16#f64b89a4#;
    pragma Export (C, u00156, "ada__integer_text_ioB");

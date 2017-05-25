@@ -7,5 +7,7 @@ package User_Interface is
 
    procedure Initialise;
    function AuthoriseUser return Boolean ;
+   procedure Output (text : in String; ln : in Boolean);
+   procedure RunCommand;
 
    end User_Interface;

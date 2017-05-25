@@ -274,12 +274,12 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\jboy_\Desktop\RTP\Nuclear\protected_shared_value.o
-   --   C:\Users\jboy_\Desktop\RTP\Nuclear\reactor_simulation.o
-   --   C:\Users\jboy_\Desktop\RTP\Nuclear\user_interface.o
-   --   C:\Users\jboy_\Desktop\RTP\Nuclear\Main.o
-   --   -LC:\Users\jboy_\Desktop\RTP\Nuclear\
-   --   -LC:\Users\jboy_\Desktop\RTP\Nuclear\
+   --   C:\Users\jboy_\Desktop\RTP\Nuclear2\protected_shared_value.o
+   --   C:\Users\jboy_\Desktop\RTP\Nuclear2\reactor_simulation.o
+   --   C:\Users\jboy_\Desktop\RTP\Nuclear2\user_interface.o
+   --   C:\Users\jboy_\Desktop\RTP\Nuclear2\Main.o
+   --   -LC:\Users\jboy_\Desktop\RTP\Nuclear2\
+   --   -LC:\Users\jboy_\Desktop\RTP\Nuclear2\
    --   -LC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
    --   -static
    --   -lgnarl
