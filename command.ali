@@ -1,15 +1,9 @@
 V "GNAT Lib v2015"
-A -O2
-A -gnatA
-A -g
-A -mtune=generic
-A -march=pentiumpro
 P ZX
 
 RN
 RV NO_IO
 RV NO_PROTECTED_TYPES
-RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
 U command%b		command.adb		41ca03fc NE OO PK
@@ -30,8 +24,8 @@ D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D command.ads		20170526054302 d4aebc86 command%s
-D command.adb		20170526054328 ad094aae command%b
+D command.ads		20170526060446 d4aebc86 command%s
+D command.adb		20170526060446 ad094aae command%b
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s

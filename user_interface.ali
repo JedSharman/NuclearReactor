@@ -1,16 +1,10 @@
 V "GNAT Lib v2015"
-A -O2
-A -gnatA
-A -g
-A -mtune=generic
-A -march=pentiumpro
 P ZX
 
 RN
 RV NO_ENUMERATION_MAPS
 RV NO_IO
 RV NO_IMPLEMENTATION_ATTRIBUTES
-RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
 U user_interface%b	user_interface.adb	cd204c76 NE OO PK
@@ -34,8 +28,8 @@ D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
 D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-tiinio.ads		20150518132148 aa04e5d6 ada.text_io.integer_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D command.ads		20170526054302 d4aebc86 command%s
-D command_list.ads	20170526054400 80fc3ccc command_list%s
+D command.ads		20170526060446 d4aebc86 command%s
+D command_list.ads	20170526060446 80fc3ccc command_list%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
@@ -62,8 +56,8 @@ D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 D s-win32.ads		20150518132150 b7f96285 system.win32%s
-D user_interface.ads	20170526054524 2926cc9a user_interface%s
-D user_interface.adb	20170526054518 aadcc050 user_interface%b
+D user_interface.ads	20170526060446 2926cc9a user_interface%s
+D user_interface.adb	20170526060446 aadcc050 user_interface%b
 X 1 ada.ads
 16K9*Ada 19e8 39|1r6 1r23 2r6 6r24
 X 3 a-inteio.ads
