@@ -18,7 +18,7 @@ RV SPARK_05
 RV MAX_TASKS=1+
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U main%b		main.adb		fb0b7b73 NE OO SU
+U main%b		main.adb		c479d649 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
@@ -51,9 +51,9 @@ D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D main.adb		20170526041630 5b6852e7 main%b
+D main.adb		20170526045402 aead98bf main%b
 D protected_shared_value.ads  20170525041416 c011e3c7 protected_shared_value%s
-D reactor_simulation.ads  20170526041648 7139f31d reactor_simulation%s
+D reactor_simulation.ads  20170526045332 bb8e947f reactor_simulation%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
 D s-conca3.ads		20150518132148 0b705ca5 system.concat_3%s
@@ -84,23 +84,24 @@ X 1 ada.ads
 16K9*Ada 19e8 15|3r6 3r23
 X 9 a-textio.ads
 49K13*Text_IO 471e16 15|3w10 3r27
-166U14*New_Line 15|106s16
-242U14*Put 15|99s16 100s16 101s16 102s16 103s16 104s16 105s16
-263U14*Put_Line 15|96s16
+166U14*New_Line 15|108s16
+242U14*Put 15|101s16 102s16 103s16 104s16 105s16 106s16 107s16
+263U14*Put_Line 15|98s16
 X 15 main.adb
-6U11*Main 6b11 117l5 117t9
+6U11*Main 6b11 119l5 119t9
 8w4 reaction_chamber_temperature{16|3W19}
 11N4 del 34r23 45r23 57r23 69r23
-12N4 disp 95r16
-14w4 the_core{17|27W18} 38r10 49r10 73r41 93r16 96r26 96r57
+12N4 disp 97r16
+14w4 the_core{17|27W18} 37r13 38r10 48r13 49r10 60r13 72r13 73r41 93r10 95r16
+. 98r26 98r57
 15w4 the_control{17|49W19} 49r34 91r10
 16w4 the_cooler{17|60W19} 61r10
 19f4 flow_rate{float} 76r28 77r27 78r30
 20f4 flowing_salt{float} 76m74 76r74 77m71 77r71 78m73 78r73
-21w4 reactor_salt{17|11W18} 73r10 76r10 77r38 100r20
-22w4 cooler_salt{17|11W18} 61m26 61r26 77r10 78r41 102r20
-23w4 reservoir_salt{17|11W18} 76r39 78r10 104r20
-26t9 Reaction_Chamber 85b14 112l8 112t24
+21w4 reactor_salt{17|11W18} 73r10 76r10 77r38 102r20
+22w4 cooler_salt{17|11W18} 61m26 61r26 77r10 78r41 104r20
+23w4 reservoir_salt{17|11W18} 76r39 78r10 106r20
+26t9 Reaction_Chamber 85b14 114l8 114t24
 28t9 Core 33b14 42l8 42t12
 29t9 Control 44b14 54l8 54t15
 30t9 Cooler 56b14 66l8 66t14
@@ -114,15 +115,16 @@ X 16 protected_shared_value.ads
 3W19*Shared_Integer 15|8r35 16|11e22
 X 17 reactor_simulation.ads
 2K9*Reactor_Simulation 15|4w6 4r30 17|101e23
-5N4*REACTOR_TIME_STEP 15|109r22
+5N4*REACTOR_TIME_STEP 15|111r22
 11W18*Salt_Retainer 15|21r19 22r18 23r21 17|25e20
 12U17 Flow 15|76s23 77s22 78s25
-13V16 CurrentTemperature{float} 15|76s54 77s51 78s53 100s33 102s32 104s35
+13V16 CurrentTemperature{float} 15|76s54 77s51 78s53 102s33 104s32 106s35
 14U17 ChangeTemperature 15|73s23
 27W18*Fuel_Rod_Assembly 15|14r15 17|47e25
 28U17 React 15|38s19
-31V16 Particles{integer} 15|93s25 96s35
-32V16 Radicals{integer} 15|96s66
+30U17 SetRadicals 15|93s19
+31V16 Particles{integer} 15|37s22 48s22 60s22 72s22 95s25 98s35
+32V16 Radicals{integer} 15|98s66
 33U17 RemoveRadicals 15|49s19
 34V16 Output{float} 15|73s50
 49W19*Control_Rod_Assembly 15|15r18 17|58e28
@@ -135,6 +137,6 @@ X 30 s-stausa.ads
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 X 43 user_interface.ads
 1K9*User_Interface 15|2w6 2r26 43|13e22
-8U14*Initialise 15|88s10
+8U14*Initialise 15|87s10
 9V13*AuthoriseUser{boolean} 15|89s10
 

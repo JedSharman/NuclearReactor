@@ -11,8 +11,8 @@ procedure Main is
    del : constant := 0.2;
    disp : constant := 0;
 
-   the_core : Fuel_Rod_Assembly(2000000000, 100);
-   the_control : Control_Rod_Assembly(10);
+   the_core : Fuel_Rod_Assembly(10000, 0);--max 2000000000
+   the_control : Control_Rod_Assembly(100);
    the_cooler : Cooler(298, 53);
    --initial_fuel : Integer;
 
@@ -34,7 +34,7 @@ procedure Main is
       d : constant := del;
    begin
 
-      while(true) loop
+      while(the_core.Particles > 0) loop
          the_core.React;
          delay(d);
       end loop;
@@ -45,7 +45,7 @@ procedure Main is
       d : constant := del;
    begin
 
-      while(true) loop
+      while(the_core.Particles > 0) loop
          the_core.RemoveRadicals(the_control.Absorption);
 
          delay(d);
@@ -57,7 +57,7 @@ procedure Main is
       d : constant := del;
    begin
 
-      while(true) loop
+      while(the_core.Particles > 0) loop
          the_cooler.Cool(cooler_salt);
 
          delay(d);
@@ -69,7 +69,7 @@ procedure Main is
       d : constant := del;
    begin
 
-      while(true) loop
+      while(the_core.Particles > 0) loop
          reactor_salt.ChangeTemperature(the_core.Output);
 
          --reactor -> cooler -> resivoir -> reactor
@@ -84,11 +84,13 @@ procedure Main is
 
    task body Reaction_Chamber is
    begin
-
          Initialise;
+
       if AuthoriseUser = True then
 
-         the_control.Engage(0.0);
+         the_control.Engage(0.5);
+
+         the_core.SetRadicals(550);
 
          while(the_core.Particles > 0) loop
 
