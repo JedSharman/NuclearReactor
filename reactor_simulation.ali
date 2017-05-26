@@ -1,9 +1,4 @@
 V "GNAT Lib v2015"
-A -O2
-A -gnatA
-A -g
-A -mtune=generic
-A -march=pentiumpro
 P ZX
 
 RN
@@ -11,17 +6,16 @@ RV NO_EXCEPTIONS
 RV NO_FLOATING_POINT
 RV NO_PROTECTED_TYPES
 RV NO_STANDARD_STORAGE_POOLS
-RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U reactor_simulation%b	reactor_simulation.adb	23570cbc NE OO PK
+U reactor_simulation%b	reactor_simulation.adb	6d02196b NE OO PK
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
-U reactor_simulation%s	reactor_simulation.ads	f5db81a8 EE OO PK
+U reactor_simulation%s	reactor_simulation.ads	bb8e947f EE OO PK
 W system%s		system.ads		system.ali
 W system.exception_table%s  s-exctab.adb	s-exctab.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
@@ -34,8 +28,8 @@ D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
-D reactor_simulation.ads  20170525010150 f5db81a8 reactor_simulation%s
-D reactor_simulation.adb  20170525010150 d68c8d14 reactor_simulation%b
+D reactor_simulation.ads  20170526045332 bb8e947f reactor_simulation%s
+D reactor_simulation.adb  20170525041416 d68c8d14 reactor_simulation%b
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s

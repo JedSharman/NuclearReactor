@@ -25,8 +25,8 @@ D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
 D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
-D protected_shared_value.ads  20170525010150 c011e3c7 protected_shared_value%s
-D protected_shared_value.adb  20170525010150 d3570b0d protected_shared_value%b
+D protected_shared_value.ads  20170525041416 c011e3c7 protected_shared_value%s
+D protected_shared_value.adb  20170525041416 d3570b0d protected_shared_value%b
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
