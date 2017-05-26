@@ -39,8 +39,8 @@ package Reactor_Simulation is
       output_energy : Float := 0.0; --in jouels, rounded
 
       --enviromental constants
-      child_creation_rate : Float := 1.5;--number of radical neutrons that will be created from a reaction on average
-      ramping_rate : Float := 0.9; --percentage of free radicals which will produce another reaction
+      child_creation_rate : Float := 1.0;--number of radical neutrons that will be created from a reaction on average
+      ramping_rate : Float := 1.0; --percentage of free radicals which will produce another reaction
       energy_per_reaction : Integer := 550;--jouels output per reaction
 
       temp_number_reactions : Integer;

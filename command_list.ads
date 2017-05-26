@@ -11,12 +11,12 @@ package Command_List is
 
    type Commands is array (1..10) of command_ptr;
 
-protected type All_Commands is
-   procedure Print_All;
+--protected type All_Commands is
+   --procedure Print_All;
 
-   private
-      command_array : Commands;
+   --private
+      --command_array : Commands;
 
 
-      end All_Commands;
+      --end All_Commands;
 end Command_List;

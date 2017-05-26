@@ -48,8 +48,8 @@ D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
-D user_interface.ads	20170525010606 2926cc9a user_interface%s
-D user_interface.adb	20170525010416 922f8982 user_interface%b
+D user_interface.ads	20170525041416 2926cc9a user_interface%s
+D user_interface.adb	20170525041416 922f8982 user_interface%b
 X 1 ada.ads
 16K9*Ada 19e8 26|1r6 1r23 2r6 5r24
 X 3 a-inteio.ads
