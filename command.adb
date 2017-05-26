@@ -1,14 +1,12 @@
-package body command is
+with Ada.Text_Io; use Ada.Text_Io;
+package body Command is
 
-   function GetName return String is
-   begin
-      return "Not implemented";--name;
-   end;
+   protected body Command_1 is
+      procedure Run is
+      begin
+         Put_Line("Command 1 is Runnning");
+      end run;
 
-   procedure Run is
-   begin
-      null;
-   end;
+   end Command_1;
 
-
-end command;
+end Command;

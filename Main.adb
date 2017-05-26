@@ -87,7 +87,7 @@ procedure Main is
          Initialise;
 
       if AuthoriseUser = True then
-
+         RunCommand;
          the_control.Engage(0.5);
 
          the_core.SetRadicals(550);

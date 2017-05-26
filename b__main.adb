@@ -33,9 +33,11 @@ package body ada_main is
    E143 : Short_Integer; pragma Import (Ada, E143, "system__tasking__protected_objects__entries_E");
    E141 : Short_Integer; pragma Import (Ada, E141, "system__tasking__queuing_E");
    E131 : Short_Integer; pragma Import (Ada, E131, "system__tasking__stages_E");
+   E181 : Short_Integer; pragma Import (Ada, E181, "command_E");
    E121 : Short_Integer; pragma Import (Ada, E121, "protected_shared_value_E");
    E129 : Short_Integer; pragma Import (Ada, E129, "reactor_simulation_E");
    E155 : Short_Integer; pragma Import (Ada, E155, "user_interface_E");
+   E179 : Short_Integer; pragma Import (Ada, E179, "command_list_E");
 
    Local_Priority_Specific_Dispatching : constant String := "";
    Local_Interrupt_States : constant String := "";
@@ -44,26 +46,33 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E143 := E143 - 1;
+      E179 := E179 - 1;
       declare
          procedure F1;
-         pragma Import (Ada, F1, "system__tasking__protected_objects__entries__finalize_spec");
+         pragma Import (Ada, F1, "command_list__finalize_spec");
       begin
          F1;
       end;
-      E103 := E103 - 1;
+      E143 := E143 - 1;
       declare
          procedure F2;
-         pragma Import (Ada, F2, "ada__text_io__finalize_spec");
+         pragma Import (Ada, F2, "system__tasking__protected_objects__entries__finalize_spec");
       begin
          F2;
       end;
+      E103 := E103 - 1;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "system__file_io__finalize_body");
+         pragma Import (Ada, F3, "ada__text_io__finalize_spec");
+      begin
+         F3;
+      end;
+      declare
+         procedure F4;
+         pragma Import (Ada, F4, "system__file_io__finalize_body");
       begin
          E110 := E110 - 1;
-         F3;
+         F4;
       end;
       declare
          procedure Reraise_Library_Exception_If_Any;
@@ -165,7 +174,7 @@ package body ada_main is
            False, False, True, False, True, True, False, True, 
            True, True, False, True, False, False, False, False, 
            False, False, True, False, True, False),
-         Count => (0, 0, 0, 0, 0, 0, 1, 0, 2, 0),
+         Count => (0, 0, 0, 0, 0, 0, 1, 0, 3, 0),
          Unknown => (False, False, False, False, False, False, True, False, True, False));
       Priority_Specific_Dispatching :=
         Local_Priority_Specific_Dispatching'Address;
@@ -235,9 +244,12 @@ package body ada_main is
       E141 := E141 + 1;
       System.Tasking.Stages'Elab_Body;
       E131 := E131 + 1;
+      E181 := E181 + 1;
       E121 := E121 + 1;
       Reactor_Simulation'Elab_Spec;
       E129 := E129 + 1;
+      Command_List'Elab_Spec;
+      E179 := E179 + 1;
       E155 := E155 + 1;
    end adainit;
 
@@ -274,12 +286,14 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\jboy_\Desktop\RTP\Nuclear2\protected_shared_value.o
-   --   C:\Users\jboy_\Desktop\RTP\Nuclear2\reactor_simulation.o
-   --   C:\Users\jboy_\Desktop\RTP\Nuclear2\user_interface.o
-   --   C:\Users\jboy_\Desktop\RTP\Nuclear2\Main.o
-   --   -LC:\Users\jboy_\Desktop\RTP\Nuclear2\
-   --   -LC:\Users\jboy_\Desktop\RTP\Nuclear2\
+   --   C:\Users\jboy_\Desktop\RTP\Nuclear3\rec\command.o
+   --   C:\Users\jboy_\Desktop\RTP\Nuclear3\rec\protected_shared_value.o
+   --   C:\Users\jboy_\Desktop\RTP\Nuclear3\rec\reactor_simulation.o
+   --   C:\Users\jboy_\Desktop\RTP\Nuclear3\rec\Main.o
+   --   C:\Users\jboy_\Desktop\RTP\Nuclear3\rec\command_list.o
+   --   C:\Users\jboy_\Desktop\RTP\Nuclear3\rec\user_interface.o
+   --   -LC:\Users\jboy_\Desktop\RTP\Nuclear3\rec\
+   --   -LC:\Users\jboy_\Desktop\RTP\Nuclear3\rec\
    --   -LC:/gnat/2015/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
    --   -static
    --   -lgnarl

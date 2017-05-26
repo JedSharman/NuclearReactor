@@ -4,71 +4,81 @@ A -gnatA
 A -g
 A -mtune=generic
 A -march=pentiumpro
-P SS ZX
+P ZX
 
 RN
-RV NO_DISPATCH
-RV NO_EXCEPTION_HANDLERS
-RV NO_EXCEPTIONS
-RV NO_IMPLICIT_LOOPS
-RV NO_STANDARD_STORAGE_POOLS
+RV NO_IO
+RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
+RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U command_list%s	command_list.ads	45081f3b EE OO PF PK
+U command_list%b	command_list.adb	efefdf2b NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W command%s		command.adb		command.ali
+
+U command_list%s	command_list.ads	7d744cd0 EE OO PF PK
 W ada.tags%s		a-tags.adb		a-tags.ali
 W command%s		command.adb		command.ali
-W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
-W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
-W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W user_interface%s	user_interface.adb	user_interface.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
 D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
-D a-finali.ads		20150518132148 69f99942 ada.finalization%s
+D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D command.ads		20170526031852 5d275e54 command%s
-D command_list.ads	20170526030854 182f416f command_list%s
+D command.ads		20170526054302 d4aebc86 command%s
+D command_list.ads	20170526054400 80fc3ccc command_list%s
+D command_list.adb	20170526054434 83d0aab5 command_list%b
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-c.ads		20150518132148 5421119b interfaces.c%s
+D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
+D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
 D system.ads		20150518132150 f4ce8c3a system%s
+D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
-D s-finmas.ads		20150518132148 814daec4 system.finalization_masters%s
-D s-finroo.ads		20150518132148 4ff27390 system.finalization_root%s
-D s-memory.ads		20150518132150 597d6634 system.memory%s
+D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-multip.ads		20150518132150 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20150518132150 2e5b26a9 system.os_interface%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
-D s-pooglo.ads		20150518132150 542f33d0 system.pool_global%s
-D s-secsta.ads		20150518132150 86a2856d system.secondary_stack%s
 D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
 D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stausa.ads		20150518132150 017a0a05 system.stack_usage%s
 D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
-D s-stalib.adb		20150518132150 f2fe2716 system.standard_library%b
 D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
-D s-stopoo.ads		20150518132150 b16154c2 system.storage_pools%s
-D s-stratt.ads		20150518132150 aedef97e system.stream_attributes%s
-D s-string.ads		20150518132150 8fe54fb7 system.strings%s
-D s-ststop.ads		20150518132150 e6693757 system.strings.stream_ops%s
+D s-tasinf.ads		20150518132150 601f6b72 system.task_info%s
+D s-taspri.ads		20150518132150 6c1d93d4 system.task_primitives%s
+D s-taskin.ads		20150518132150 339749f0 system.tasking%s
+D s-taprob.ads		20150518132150 502249e3 system.tasking.protected_objects%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
+D s-win32.ads		20150518132150 b7f96285 system.win32%s
+D user_interface.ads	20170526054524 2926cc9a user_interface%s
+X 1 ada.ads
+16K9*Ada 19e8 10|2r6 2r23
+X 6 a-textio.ads
+49K13*Text_IO 471e16 10|2w10 2r27
+263U14*Put_Line 10|7s11
 X 8 command.ads
-1K9*Command 16e12 9|1w6 9r31
-2R9*CommandBase 6e17 9|9r39
+1K9*Command 8e12 9|1w6 8r17 10|1w6
+3W19*Command_1 6e17 9|8r25
+4U16 Run 10|13s19
 X 9 command_list.ads
-2K9*Command_List 22l5 22e17
-3R9*node 4r23 5c9 8e14
-4P9*ptr(3R9) 7r13
-6i7*item{integer}
-7p7*next{4P9}
-9P9*command_ptr(8|2R9) 12r38
-12A9*Commands(9P9)<integer>
-X 10 system.ads
-67M9*Address
-X 14 s-memory.ads
-53V13*Alloc{10|67M9} 103i<c,__gnat_malloc>22
-68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{10|67M9} 105i<c,__gnat_realloc>22
-X 21 s-stalib.adb
-93U14 Break_Start 94i<c,__gnat_break_start>22
+3K9*Command_List 8E9 10l5 10e17 10|3b14 18l5 18t17
+4U17*Print_All 10|5b17 8l11 8t20
+5U17*Run 5>21 10|10b17 16l11 16t14
+5i21 com_to_run{integer} 10|10b21 12r13
+8w9 com_1{8|3W19} 10|13r13
+X 25 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 36 user_interface.ads
+1K9*User_Interface 9|2w6 36|13e22
 

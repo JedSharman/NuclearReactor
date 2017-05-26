@@ -1,5 +1,6 @@
 with Ada.Text_Io; use Ada.Text_Io;
 with Ada.Integer_Text_Io;
+with Command_List;
 
 package body User_Interface is
 package Int_Io renames Ada.Integer_Text_Io;
@@ -41,9 +42,14 @@ package Int_Io renames Ada.Integer_Text_Io;
    end Output;
 
    procedure RunCommand is
-      begin
-      Put_Line("The following Commands are available:");
 
+      temp_id :Integer;
+   begin
+      Put_Line("The following Commands are available:");
+      Command_List.Print_All;
+      Put("Which to Run?");
+      Int_Io.Get(temp_id); Skip_Line;
+      Command_List.Run(temp_id);
 
       end RunCommand;
 

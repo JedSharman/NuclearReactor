@@ -4,58 +4,69 @@ A -gnatA
 A -g
 A -mtune=generic
 A -march=pentiumpro
-P SS ZX
+P ZX
 
 RN
-RV NO_DISPATCHING_CALLS
-RV NO_IMPLICIT_CONDITIONALS
-RV NO_SECONDARY_STACK
-RV NO_STANDARD_STORAGE_POOLS
+RV NO_IO
+RV NO_PROTECTED_TYPES
 RV NO_IMPLEMENTATION_PRAGMAS
-RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U command%b		command.adb		4b977dd6 NE OO PK IL
-W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
-
-U command%s		command.ads		5d275e54 EE OO PF PK
-W ada.exceptions%s	a-except.adb		a-except.ali
-W ada.streams%s		a-stream.adb		a-stream.ali
+U command%b		command.adb		41ca03fc NE OO PK
+W ada%s			ada.ads			ada.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
-W system%s		system.ads		system.ali
-W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
-W system.storage_elements%s  s-stoele.adb	s-stoele.ali
-W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
-W system.strings.stream_ops%s  s-ststop.adb	s-ststop.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+U command%s		command.ads		d4aebc86 EE NE OO PK
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
 D ada.ads		20150518132148 3ffc8e18 ada%s
 D a-except.ads		20150518132148 5250cb69 ada.exceptions%s
+D a-ioexce.ads		20150518132148 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20150518132148 119b8fb3 ada.streams%s
 D a-tags.ads		20150518132148 dc4d0634 ada.tags%s
+D a-textio.ads		20150518132148 386df5d4 ada.text_io%s
 D a-unccon.ads		20150518132148 f9eb8f06 ada.unchecked_conversion%s
-D a-uncdea.ads		20150518132148 f15a5ed1 ada.unchecked_deallocation%s
-D command.ads		20170526031852 5d275e54 command%s
-D command.adb		20170526031902 16b02382 command%b
+D command.ads		20170526054302 d4aebc86 command%s
+D command.adb		20170526054328 ad094aae command%b
+D interfac.ads		20150518132148 6033a23f interfaces%s
+D i-c.ads		20150518132148 5421119b interfaces.c%s
+D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
+D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
 D system.ads		20150518132150 f4ce8c3a system%s
+D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
+D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
+D s-multip.ads		20150518132150 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20150518132150 2e5b26a9 system.os_interface%s
 D s-parame.ads		20150518132150 7e2a0d7f system.parameters%s
-D s-secsta.ads		20150518132150 86a2856d system.secondary_stack%s
 D s-soflin.ads		20150518132150 aa763b52 system.soft_links%s
 D s-stache.ads		20150518132150 a37c21ec system.stack_checking%s
+D s-stausa.ads		20150518132150 017a0a05 system.stack_usage%s
 D s-stalib.ads		20150518132150 fa0a3617 system.standard_library%s
 D s-stoele.ads		20150518132150 2dc34a04 system.storage_elements%s
-D s-stoele.adb		20150518132150 ed88f8fb system.storage_elements%b
-D s-stratt.ads		20150518132150 aedef97e system.stream_attributes%s
-D s-string.ads		20150518132150 8fe54fb7 system.strings%s
-D s-ststop.ads		20150518132150 e6693757 system.strings.stream_ops%s
+D s-tasinf.ads		20150518132150 601f6b72 system.task_info%s
+D s-taspri.ads		20150518132150 6c1d93d4 system.task_primitives%s
+D s-taskin.ads		20150518132150 339749f0 system.tasking%s
+D s-taprob.ads		20150518132150 502249e3 system.tasking.protected_objects%s
 D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
-X 7 command.ads
-1K9*Command 16l5 16e12 8|1b14 14l5 14t12
-2R9*CommandBase 6e17 10r26
-5a10*name{string}
-8V13*GetName{string} 8|3b13 6t7
-10R9*Command_1<2R9> 13e20
-12i10*var{integer}
-14U16*Run 8|8b14 11t7
+D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
+D s-win32.ads		20150518132150 b7f96285 system.win32%s
+X 1 ada.ads
+16K9*Ada 19e8 9|1r6 1r23
+X 6 a-textio.ads
+49K13*Text_IO 471e16 9|1w10 1r27
+263U14*Put_Line 9|7s10
+X 8 command.ads
+1K9*Command 8l5 8e12 9|2b14 12l5 12t12
+3W19*Command_1 6l8 6e17 9|4b19 10l8 10t17
+4U16 Run 9|5b17 8l11 8t14
+X 24 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 

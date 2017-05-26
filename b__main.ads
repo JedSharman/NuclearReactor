@@ -35,7 +35,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#8bb7684f#;
+   u00001 : constant Version_32 := 16#fb87719e#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#fbff4c67#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -289,9 +289,9 @@ package ada_main is
    pragma Export (C, u00126, "ada__exceptions__is_null_occurrenceB");
    u00127 : constant Version_32 := 16#9a9e8fd3#;
    pragma Export (C, u00127, "ada__exceptions__is_null_occurrenceS");
-   u00128 : constant Version_32 := 16#23570cbc#;
+   u00128 : constant Version_32 := 16#6d02196b#;
    pragma Export (C, u00128, "reactor_simulationB");
-   u00129 : constant Version_32 := 16#f5db81a8#;
+   u00129 : constant Version_32 := 16#bb8e947f#;
    pragma Export (C, u00129, "reactor_simulationS");
    u00130 : constant Version_32 := 16#d6fbdf05#;
    pragma Export (C, u00130, "system__tasking__stagesB");
@@ -341,7 +341,7 @@ package ada_main is
    pragma Export (C, u00152, "system__traces__taskingB");
    u00153 : constant Version_32 := 16#3fb127e5#;
    pragma Export (C, u00153, "system__traces__taskingS");
-   u00154 : constant Version_32 := 16#752f3968#;
+   u00154 : constant Version_32 := 16#cd204c76#;
    pragma Export (C, u00154, "user_interfaceB");
    u00155 : constant Version_32 := 16#2926cc9a#;
    pragma Export (C, u00155, "user_interfaceS");
@@ -389,10 +389,18 @@ package ada_main is
    pragma Export (C, u00176, "system__val_lluB");
    u00177 : constant Version_32 := 16#13647f88#;
    pragma Export (C, u00177, "system__val_lluS");
-   u00178 : constant Version_32 := 16#2bce1226#;
-   pragma Export (C, u00178, "system__memoryB");
-   u00179 : constant Version_32 := 16#adb3ea0e#;
-   pragma Export (C, u00179, "system__memoryS");
+   u00178 : constant Version_32 := 16#efefdf2b#;
+   pragma Export (C, u00178, "command_listB");
+   u00179 : constant Version_32 := 16#7d744cd0#;
+   pragma Export (C, u00179, "command_listS");
+   u00180 : constant Version_32 := 16#41ca03fc#;
+   pragma Export (C, u00180, "commandB");
+   u00181 : constant Version_32 := 16#d4aebc86#;
+   pragma Export (C, u00181, "commandS");
+   u00182 : constant Version_32 := 16#2bce1226#;
+   pragma Export (C, u00182, "system__memoryB");
+   u00183 : constant Version_32 := 16#adb3ea0e#;
+   pragma Export (C, u00183, "system__memoryS");
    --  BEGIN ELABORATION ORDER
    --  ada%s
    --  interfaces%s
@@ -566,13 +574,17 @@ package ada_main is
    --  system.tasking.entry_calls%b
    --  system.tasking.stages%s
    --  system.tasking.stages%b
+   --  command%s
+   --  command%b
    --  protected_shared_value%s
    --  protected_shared_value%b
    --  reactor_simulation%s
    --  reactor_simulation%b
    --  user_interface%s
-   --  user_interface%b
    --  main%b
+   --  command_list%s
+   --  command_list%b
+   --  user_interface%b
    --  END ELABORATION ORDER
 
 

@@ -1,5 +1,10 @@
 V "GNAT Lib v2015"
 M P W=b
+A -O2
+A -gnatA
+A -g
+A -mtune=generic
+A -march=pentiumpro
 P ZX
 
 RN
@@ -7,6 +12,7 @@ RV NO_DELAY
 RV NO_FIXED_POINT
 RV NO_FLOATING_POINT
 RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
 RV NO_LOCAL_PROTECTED_OBJECTS
 RV NO_RELATIVE_DELAY
 RV NO_STANDARD_STORAGE_POOLS
@@ -14,11 +20,12 @@ RV NO_TASK_HIERARCHY
 RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 RV MAX_TASKS=1+
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U main%b		main.adb		c479d649 NE OO SU
+U main%b		main.adb		fb87719e NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
@@ -28,7 +35,6 @@ W ada.text_io%s		a-textio.adb		a-textio.ali
 W protected_shared_value%s  protected_shared_value.adb  protected_shared_value.ali
 W reactor_simulation%s	reactor_simulation.adb	reactor_simulation.ali
 W system%s		system.ads		system.ali
-W system.concat_3%s	s-conca3.adb		s-conca3.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
@@ -51,12 +57,11 @@ D interfac.ads		20150518132148 6033a23f interfaces%s
 D i-c.ads		20150518132148 5421119b interfaces.c%s
 D i-cstrin.ads		20150518132148 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20150518132148 e53d8b8e interfaces.c_streams%s
-D main.adb		20170526045402 aead98bf main%b
-D protected_shared_value.ads  20170525041416 c011e3c7 protected_shared_value%s
-D reactor_simulation.ads  20170526045332 bb8e947f reactor_simulation%s
+D main.adb		20170526054702 91533f68 main%b
+D protected_shared_value.ads  20170526054052 c011e3c7 protected_shared_value%s
+D reactor_simulation.ads  20170526054052 bb8e947f reactor_simulation%s
 D system.ads		20150518132150 f4ce8c3a system%s
 D s-atacco.ads		20150518132148 4c36d12f system.address_to_access_conversions%s
-D s-conca3.ads		20150518132148 0b705ca5 system.concat_3%s
 D s-crtl.ads		20150518132148 0ebbdb71 system.crtl%s
 D s-exctab.ads		20150518132148 54135002 system.exception_table%s
 D s-ficobl.ads		20150518132148 078245e4 system.file_control_block%s
@@ -79,7 +84,7 @@ D s-traent.ads		20150518132150 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150518132150 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150518132150 1b7d22d2 system.wch_con%s
 D s-win32.ads		20150518132150 b7f96285 system.win32%s
-D user_interface.ads	20170525041416 2926cc9a user_interface%s
+D user_interface.ads	20170526054524 2926cc9a user_interface%s
 X 1 ada.ads
 16K9*Ada 19e8 15|3r6 3r23
 X 9 a-textio.ads
@@ -132,11 +137,12 @@ X 17 reactor_simulation.ads
 53V16 Absorption{integer} 15|49s46
 60W19*Cooler 15|16r17 17|70e14
 61U17 Cool 15|61s21
-X 30 s-stausa.ads
+X 29 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 43 user_interface.ads
-1K9*User_Interface 15|2w6 2r26 43|13e22
+X 42 user_interface.ads
+1K9*User_Interface 15|2w6 2r26 42|13e22
 8U14*Initialise 15|87s10
 9V13*AuthoriseUser{boolean} 15|89s10
+11U14*RunCommand 15|90s10
 
